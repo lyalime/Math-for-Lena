@@ -1,0 +1,25 @@
+{
+  "name": "on-tap-toan9-app",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Sổ tay toán học sống – ôn tập & quiz Toán 9 HK1",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check-data": "node scripts/check-data.mjs"
+  },
+  "dependencies": {
+    "framer-motion": "^11.11.17",
+    "katex": "^0.16.11",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "~4.1.11",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tailwindcss": "~4.1.11",
+    "vite": "^5.4.11"
+  }
+}

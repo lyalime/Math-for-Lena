@@ -1,0 +1,493 @@
+{
+  "id": 5,
+  "title": "Đường tròn",
+  "short": "Đường tròn",
+  "doodle": "circle",
+  "status": "ready",
+  "topics": [
+    {
+      "id": "c5t1",
+      "title": "Mở đầu về đường tròn",
+      "aiGenerated": true,
+      "summary": "Đường tròn $(O; R)$ gồm các điểm cách $O$ một khoảng $R$; so sánh $OM$ với $R$ để biết điểm nằm trong, trên hay ngoài đường tròn.",
+      "points": [
+        "Đường tròn tâm $O$ bán kính $R$, kí hiệu $(O; R)$, là tập hợp các điểm cách $O$ một khoảng bằng $R$.",
+        "Vị trí của điểm $M$: $OM < R$ thì $M$ nằm trong; $OM = R$ thì $M$ nằm trên; $OM > R$ thì $M$ nằm ngoài đường tròn.",
+        "Tâm $O$ là **tâm đối xứng**; mỗi đường thẳng đi qua tâm là một **trục đối xứng** (đường tròn có vô số trục đối xứng).",
+        "Tam giác vuông: tâm đường tròn đi qua ba đỉnh là **trung điểm cạnh huyền**, bán kính bằng nửa cạnh huyền.",
+        "Hình chữ nhật (hình vuông): bốn đỉnh cùng thuộc đường tròn có tâm là giao điểm hai đường chéo, bán kính bằng nửa đường chéo."
+      ],
+      "formulas": [
+        { "id": "c5t1f1", "front": "Điểm $M$ nằm trong / trên / ngoài $(O; R)$", "back": "$OM < R$ / $OM = R$ / $OM > R$" },
+        { "id": "c5t1f2", "front": "Tâm đối xứng và trục đối xứng của đường tròn", "back": "Tâm đối xứng là $O$; trục đối xứng là mọi đường thẳng qua $O$" },
+        { "id": "c5t1f3", "front": "Đường tròn qua 3 đỉnh tam giác vuông", "back": "Tâm là trung điểm cạnh huyền, $R = \\dfrac{\\text{cạnh huyền}}{2}$" },
+        { "id": "c5t1f4", "front": "Đường tròn qua 4 đỉnh hình chữ nhật", "back": "Tâm là giao hai đường chéo, $R = \\dfrac{\\text{đường chéo}}{2}$" },
+        { "id": "c5t1f5", "front": "Bán kính đường tròn ngoại tiếp tam giác đều cạnh $a$", "back": "$R = \\dfrac{a\\sqrt{3}}{3}$" }
+      ],
+      "example": {
+        "problem": "Cho hình chữ nhật $ABCD$ có $AB = 8$ cm, $BC = 6$ cm. Chứng minh bốn điểm $A, B, C, D$ cùng thuộc một đường tròn và tính bán kính.",
+        "steps": [
+          "Gọi $O$ là giao điểm hai đường chéo. Hai đường chéo hình chữ nhật bằng nhau và cắt nhau tại trung điểm mỗi đường nên $OA = OB = OC = OD$.",
+          "Vậy $A, B, C, D$ cùng thuộc đường tròn tâm $O$ bán kính $OA$.",
+          "$AC = \\sqrt{8^2 + 6^2} = 10$ (cm), suy ra $R = \\dfrac{AC}{2} = 5$ (cm)."
+        ],
+        "source": "Phỏng theo đề cương (.docx), Bài 16"
+      }
+    },
+    {
+      "id": "c5t2",
+      "title": "Cung và dây của đường tròn",
+      "aiGenerated": true,
+      "summary": "Đường kính là dây lớn nhất; khoảng cách từ tâm đến dây tính bằng Pythagore; số đo cung nhỏ bằng số đo góc ở tâm chắn cung đó.",
+      "points": [
+        "**Đường kính là dây lớn nhất** của đường tròn.",
+        "Đường kính vuông góc với một dây thì đi qua trung điểm dây ấy; đường kính đi qua trung điểm một dây (không qua tâm) thì vuông góc với dây ấy.",
+        "Khoảng cách từ tâm đến dây $AB$: $d = \\sqrt{R^2 - \\left(\\dfrac{AB}{2}\\right)^2}$. Hai dây bằng nhau khi và chỉ khi cách đều tâm; dây lớn hơn thì gần tâm hơn.",
+        "**Góc ở tâm** là góc có đỉnh trùng với tâm đường tròn.",
+        "Số đo cung nhỏ bằng số đo góc ở tâm chắn cung đó; cung lớn $= 360^\\circ -$ cung nhỏ; nửa đường tròn bằng $180^\\circ$."
+      ],
+      "formulas": [
+        { "id": "c5t2f1", "front": "Dây lớn nhất của đường tròn", "back": "Đường kính ($= 2R$)" },
+        { "id": "c5t2f2", "front": "Khoảng cách từ tâm đến dây $AB$", "back": "$d = \\sqrt{R^2 - \\left(\\dfrac{AB}{2}\\right)^2}$" },
+        { "id": "c5t2f3", "front": "Đường kính vuông góc với dây thì", "back": "Đi qua trung điểm của dây đó" },
+        { "id": "c5t2f4", "front": "Số đo cung nhỏ $AB$", "back": "Bằng số đo góc ở tâm $\\widehat{AOB}$" },
+        { "id": "c5t2f5", "front": "Số đo cung lớn $AB$", "back": "$360^\\circ -$ số đo cung nhỏ $AB$" }
+      ],
+      "example": {
+        "problem": "Cho đường tròn $(O; 5\\text{ cm})$ và dây $AB = 8$ cm. Tính khoảng cách từ $O$ đến $AB$.",
+        "steps": [
+          "Kẻ $OH \\perp AB$ tại $H$ thì $H$ là trung điểm $AB$, nên $HA = 4$ cm.",
+          "Tam giác $OHA$ vuông tại $H$: $OH = \\sqrt{OA^2 - HA^2} = \\sqrt{25 - 16} = 3$ (cm)."
+        ]
+      }
+    },
+    {
+      "id": "c5t3",
+      "title": "Độ dài cung tròn, diện tích hình quạt, hình vành khuyên",
+      "aiGenerated": true,
+      "summary": "Độ dài cung $n^\\circ$ là $\\dfrac{\\pi R n}{180}$, diện tích hình quạt $n^\\circ$ là $\\dfrac{\\pi R^2 n}{360} = \\dfrac{\\ell R}{2}$, vành khuyên là $\\pi(R^2 - r^2)$.",
+      "points": [
+        "Chu vi đường tròn $C = 2\\pi R$; độ dài cung $n^\\circ$: $\\ell = \\dfrac{\\pi R n}{180}$.",
+        "Diện tích hình tròn $S = \\pi R^2$; diện tích hình quạt tròn $n^\\circ$: $S_q = \\dfrac{\\pi R^2 n}{360} = \\dfrac{\\ell R}{2}$.",
+        "Hình vành khuyên giới hạn bởi hai đường tròn đồng tâm bán kính $R > r$: $S = \\pi(R^2 - r^2)$.",
+        "Diện tích hình viên phân $=$ diện tích hình quạt $-$ diện tích tam giác tạo bởi hai bán kính và dây.",
+        "Bánh xe đường kính $d$ quay một vòng thì đi được quãng đường bằng chu vi $\\pi d$."
+      ],
+      "formulas": [
+        { "id": "c5t3f1", "front": "Độ dài cung $n^\\circ$, bán kính $R$", "back": "$\\ell = \\dfrac{\\pi R n}{180}$" },
+        { "id": "c5t3f2", "front": "Diện tích hình quạt $n^\\circ$, bán kính $R$", "back": "$S = \\dfrac{\\pi R^2 n}{360}$" },
+        { "id": "c5t3f3", "front": "Diện tích hình quạt theo độ dài cung $\\ell$", "back": "$S = \\dfrac{\\ell R}{2}$" },
+        { "id": "c5t3f4", "front": "Diện tích hình vành khuyên ($R > r$)", "back": "$S = \\pi(R^2 - r^2)$" },
+        { "id": "c5t3f5", "front": "Chu vi và diện tích hình tròn", "back": "$C = 2\\pi R$, $\\ S = \\pi R^2$" }
+      ],
+      "example": {
+        "problem": "Tính độ dài cung $60^\\circ$ của đường tròn bán kính $9$ cm.",
+        "steps": [
+          "$\\ell = \\dfrac{\\pi R n}{180} = \\dfrac{\\pi \\cdot 9 \\cdot 60}{180}$.",
+          "$\\ell = 3\\pi \\approx 9{,}42$ (cm)."
+        ],
+        "source": "Phỏng theo đề cương (.docx), Bài 20"
+      }
+    },
+    {
+      "id": "c5t4",
+      "title": "Đường thẳng và đường tròn, tiếp tuyến",
+      "aiGenerated": true,
+      "summary": "So sánh khoảng cách $d$ từ tâm đến đường thẳng với $R$; tiếp tuyến vuông góc với bán kính tại tiếp điểm; hai tiếp tuyến cắt nhau thì hai đoạn tiếp tuyến bằng nhau.",
+      "points": [
+        "Gọi $d$ là khoảng cách từ $O$ đến đường thẳng $a$: $d < R$ thì cắt nhau (2 điểm chung); $d = R$ thì tiếp xúc (1 điểm chung); $d > R$ thì không giao nhau.",
+        "**Tiếp tuyến vuông góc với bán kính tại tiếp điểm.** Dấu hiệu: đường thẳng đi qua điểm $A \\in (O)$ và vuông góc với $OA$ thì là tiếp tuyến.",
+        "**Hai tiếp tuyến cắt nhau** tại $M$ (tiếp điểm $A, B$): $MA = MB$; $MO$ là tia phân giác của $\\widehat{AMB}$; $OM$ là tia phân giác của $\\widehat{AOB}$; $OM \\perp AB$ tại trung điểm $AB$.",
+        "Độ dài đoạn tiếp tuyến: $MA = \\sqrt{MO^2 - R^2}$.",
+        "Đường tròn nội tiếp tam giác tiếp xúc ba cạnh; các đoạn tiếp tuyến kẻ từ cùng một đỉnh bằng nhau."
+      ],
+      "formulas": [
+        { "id": "c5t4f1", "front": "Đường thẳng cắt / tiếp xúc / không giao đường tròn", "back": "$d < R$ / $d = R$ / $d > R$" },
+        { "id": "c5t4f2", "front": "Tính chất tiếp tuyến", "back": "Vuông góc với bán kính tại tiếp điểm" },
+        { "id": "c5t4f3", "front": "Hai tiếp tuyến $MA, MB$ cắt nhau tại $M$", "back": "$MA = MB$, $MO$ là phân giác $\\widehat{AMB}$, $OM \\perp AB$" },
+        { "id": "c5t4f4", "front": "Độ dài đoạn tiếp tuyến $MA$", "back": "$MA = \\sqrt{MO^2 - R^2}$" },
+        { "id": "c5t4f5", "front": "Dấu hiệu nhận biết tiếp tuyến tại $A$", "back": "Đi qua $A \\in (O)$ và vuông góc với $OA$" }
+      ],
+      "example": {
+        "problem": "Cho $(O; R)$ và điểm $M$ với $OM = 2R$. Kẻ hai tiếp tuyến $MA, MB$. Tính $MA$ và $\\widehat{AMB}$.",
+        "steps": [
+          "$OA \\perp MA$ nên $MA = \\sqrt{OM^2 - OA^2} = \\sqrt{4R^2 - R^2} = R\\sqrt{3}$.",
+          "$\\sin\\widehat{AMO} = \\dfrac{OA}{OM} = \\dfrac{1}{2} \\Rightarrow \\widehat{AMO} = 30^\\circ$.",
+          "$MO$ là phân giác nên $\\widehat{AMB} = 2 \\cdot 30^\\circ = 60^\\circ$."
+        ]
+      }
+    },
+    {
+      "id": "c5t5",
+      "title": "Vị trí tương đối của hai đường tròn",
+      "aiGenerated": true,
+      "summary": "So sánh đoạn nối tâm $d = OO'$ với $R + r$ và $R - r$ để biết hai đường tròn cắt nhau, tiếp xúc hay không giao nhau.",
+      "points": [
+        "Cho $(O; R)$ và $(O'; r)$ với $R \\ge r$, $d = OO'$.",
+        "**Cắt nhau** (2 điểm chung): $R - r < d < R + r$.",
+        "**Tiếp xúc** (1 điểm chung): tiếp xúc ngoài khi $d = R + r$; tiếp xúc trong khi $d = R - r > 0$.",
+        "**Không giao nhau:** ở ngoài nhau khi $d > R + r$; đựng nhau khi $d < R - r$ (đồng tâm khi $d = 0$).",
+        "Hai đường tròn cắt nhau tại $A, B$ thì đường nối tâm $OO'$ là **đường trung trực** của dây chung $AB$. Hai đường tròn tiếp xúc thì tiếp điểm nằm trên đường nối tâm."
+      ],
+      "formulas": [
+        { "id": "c5t5f1", "front": "Hai đường tròn cắt nhau khi", "back": "$R - r < OO' < R + r$" },
+        { "id": "c5t5f2", "front": "Tiếp xúc ngoài khi", "back": "$OO' = R + r$" },
+        { "id": "c5t5f3", "front": "Tiếp xúc trong khi", "back": "$OO' = R - r > 0$" },
+        { "id": "c5t5f4", "front": "Ở ngoài nhau / đựng nhau khi", "back": "$OO' > R + r$ / $OO' < R - r$" },
+        { "id": "c5t5f5", "front": "Hai đường tròn cắt nhau tại $A, B$", "back": "$OO'$ là đường trung trực của $AB$" }
+      ],
+      "example": {
+        "problem": "Cho $(O; 4\\text{ cm})$ và $(O'; 3\\text{ cm})$ có $OO' = 5$ cm, cắt nhau tại $A$ và $B$. Tính $AB$.",
+        "steps": [
+          "$OA^2 + O'A^2 = 16 + 9 = 25 = OO'^2$ nên tam giác $OAO'$ vuông tại $A$.",
+          "Gọi $H$ là giao điểm của $AB$ và $OO'$ thì $AH \\perp OO'$ và $H$ là trung điểm $AB$.",
+          "$AH = \\dfrac{OA \\cdot O'A}{OO'} = \\dfrac{4 \\cdot 3}{5} = 2{,}4$ (cm), suy ra $AB = 2AH = 4{,}8$ (cm)."
+        ],
+        "source": "Phỏng theo bộ đề ôn theo chương (Chương 5, Đề 10)"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "c5q01", "topic": "c5t1", "difficulty": "de", "type": "mcq", "aiGenerated": true,
+      "source": "Đề cương ôn tập (.docx), Câu 14",
+      "prompt": "Tâm đối xứng của đường tròn là",
+      "options": ["Điểm bất kì bên trong đường tròn", "Điểm bất kì bên ngoài đường tròn", "Điểm bất kì trên đường tròn", "Tâm của đường tròn"],
+      "answer": 3,
+      "solution": ["Đường tròn có tâm đối xứng duy nhất là tâm của nó."]
+    },
+    {
+      "id": "c5q02", "topic": "c5t1", "difficulty": "de", "type": "tf", "aiGenerated": true,
+      "prompt": "Đường tròn có vô số trục đối xứng.",
+      "answer": true,
+      "solution": ["Mỗi đường thẳng đi qua tâm (chứa một đường kính) đều là trục đối xứng. Khẳng định **đúng**."]
+    },
+    {
+      "id": "c5q03", "topic": "c5t1", "difficulty": "de", "type": "mcq", "aiGenerated": true,
+      "prompt": "Cho đường tròn $(O; 5\\text{ cm})$ và điểm $M$ với $OM = 4$ cm. Điểm $M$",
+      "options": ["nằm trong đường tròn", "nằm trên đường tròn", "nằm ngoài đường tròn", "không xác định được"],
+      "answer": 0,
+      "solution": ["$OM = 4 < 5 = R$ nên $M$ nằm trong đường tròn."]
+    },
+    {
+      "id": "c5q04", "topic": "c5t1", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "source": "Bộ đề ôn theo chương (Chương 5, Đề 1 – tự luận câu 1)",
+      "prompt": "Tam giác $ABC$ vuông tại $A$ có $AB = 5$ cm, $AC = 12$ cm. Tính bán kính đường tròn đi qua ba điểm $A, B, C$ (cm).",
+      "answer": "6,5",
+      "solution": ["$BC = \\sqrt{5^2 + 12^2} = 13$ (cm).", "Tâm là trung điểm cạnh huyền $BC$, $R = \\dfrac{13}{2} = 6{,}5$ (cm)."]
+    },
+    {
+      "id": "c5q05", "topic": "c5t1", "difficulty": "tb", "type": "tf", "aiGenerated": true,
+      "prompt": "Điểm $A$ cách tâm $O$ một khoảng bằng đường kính thì $A$ nằm trên đường tròn $(O)$.",
+      "answer": false,
+      "solution": ["$OA = 2R > R$ nên $A$ nằm **ngoài** đường tròn. Khẳng định **sai**."]
+    },
+    {
+      "id": "c5q06", "topic": "c5t1", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "prompt": "Tính bán kính đường tròn đi qua bốn đỉnh của hình vuông cạnh $4$ cm (cm, làm tròn đến hàng phần trăm).",
+      "answer": "2,83",
+      "solution": ["Đường chéo hình vuông: $4\\sqrt{2}$ cm.", "$R = \\dfrac{4\\sqrt{2}}{2} = 2\\sqrt{2} \\approx 2{,}83$ (cm)."]
+    },
+    {
+      "id": "c5q07", "topic": "c5t1", "difficulty": "kho", "type": "mcq", "aiGenerated": true,
+      "prompt": "Bán kính đường tròn ngoại tiếp tam giác đều cạnh $a$ là",
+      "options": ["$\\dfrac{a\\sqrt{3}}{3}$", "$\\dfrac{a\\sqrt{3}}{2}$", "$\\dfrac{a}{2}$", "$\\dfrac{a\\sqrt{3}}{6}$"],
+      "answer": 0,
+      "solution": [
+        "Tâm là trọng tâm, nằm trên đường cao dài $h = \\dfrac{a\\sqrt{3}}{2}$.",
+        "Bán kính bằng $\\dfrac{2}{3}h = \\dfrac{2}{3} \\cdot \\dfrac{a\\sqrt{3}}{2} = \\dfrac{a\\sqrt{3}}{3}$."
+      ]
+    },
+    {
+      "id": "c5q08", "topic": "c5t1", "difficulty": "kho", "type": "number", "aiGenerated": true,
+      "prompt": "Trong mặt phẳng toạ độ, cho đường tròn tâm $O(0; 0)$ bán kính $5$. Trong các điểm $A(3; 4)$, $B(4; -3)$, $C(1; 5)$, $D(-5; 0)$, có bao nhiêu điểm nằm trên đường tròn?",
+      "answer": "3",
+      "solution": [
+        "Điểm $(x; y)$ nằm trên đường tròn khi $x^2 + y^2 = 25$.",
+        "$A$: $9 + 16 = 25$ ✓; $B$: $16 + 9 = 25$ ✓; $C$: $1 + 25 = 26$ ✗; $D$: $25 + 0 = 25$ ✓.",
+        "Có $3$ điểm."
+      ]
+    },
+    {
+      "id": "c5q09", "topic": "c5t1", "difficulty": "kho", "type": "tf", "aiGenerated": true,
+      "prompt": "Cho đường tròn $(O; R)$ và điểm $A$ với $OA = R\\sqrt{2}$. Khi đó $A$ nằm ngoài đường tròn.",
+      "answer": true,
+      "solution": ["$\\sqrt{2} > 1$ nên $OA = R\\sqrt{2} > R$, suy ra $A$ nằm ngoài đường tròn. Khẳng định **đúng**."]
+    },
+    {
+      "id": "c5q10", "topic": "c5t2", "difficulty": "de", "type": "mcq", "aiGenerated": true,
+      "source": "Đề cương ôn tập (.docx), Câu 15",
+      "prompt": "Góc ở tâm là góc",
+      "options": ["có đỉnh nằm trên đường tròn", "có đỉnh trùng với tâm đường tròn", "có hai cạnh là hai đường kính", "có đỉnh nằm trên bán kính của đường tròn"],
+      "answer": 1,
+      "solution": ["Theo định nghĩa, góc ở tâm là góc có đỉnh trùng với tâm đường tròn."]
+    },
+    {
+      "id": "c5q11", "topic": "c5t2", "difficulty": "de", "type": "tf", "aiGenerated": true,
+      "prompt": "Số đo cung lớn bằng $360^\\circ$ trừ số đo cung nhỏ có chung hai mút.",
+      "answer": true,
+      "solution": ["Cung lớn và cung nhỏ cùng hai mút ghép lại thành cả đường tròn $360^\\circ$. Khẳng định **đúng**."]
+    },
+    {
+      "id": "c5q12", "topic": "c5t2", "difficulty": "de", "type": "number", "aiGenerated": true,
+      "prompt": "Góc ở tâm $\\widehat{AOB} = 70^\\circ$. Tính số đo cung nhỏ $AB$ (độ).",
+      "answer": "70",
+      "solution": ["Số đo cung nhỏ bằng số đo góc ở tâm chắn cung: $70^\\circ$."]
+    },
+    {
+      "id": "c5q13", "topic": "c5t2", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "prompt": "Cho đường tròn $(O; 10\\text{ cm})$ và dây $AB = 12$ cm. Tính khoảng cách từ $O$ đến $AB$ (cm).",
+      "answer": "8",
+      "solution": ["Kẻ $OH \\perp AB$ thì $HA = 6$ cm.", "$OH = \\sqrt{10^2 - 6^2} = 8$ (cm)."]
+    },
+    {
+      "id": "c5q14", "topic": "c5t2", "difficulty": "tb", "type": "mcq", "aiGenerated": true,
+      "prompt": "Đường tròn $(O; R)$ có dây $AB = R$. Số đo cung nhỏ $AB$ là",
+      "options": ["$60^\\circ$", "$90^\\circ$", "$120^\\circ$", "$30^\\circ$"],
+      "answer": 0,
+      "solution": ["$OA = OB = AB = R$ nên tam giác $OAB$ đều, $\\widehat{AOB} = 60^\\circ$.", "Số đo cung nhỏ $AB$ là $60^\\circ$."]
+    },
+    {
+      "id": "c5q15", "topic": "c5t2", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "source": "Phỏng theo đề cương (.docx), Bài 19 — số liệu do AI chọn",
+      "prompt": "Cho đường tròn $(O; 6\\text{ cm})$ và dây $AB$ có số đo cung nhỏ $AB$ bằng $120^\\circ$. Tính độ dài dây $AB$ (cm, làm tròn đến hàng phần trăm).",
+      "answer": "10,39",
+      "solution": [
+        "$\\widehat{AOB} = 120^\\circ$. Kẻ $OH \\perp AB$ thì $OH$ là phân giác, $\\widehat{AOH} = 60^\\circ$.",
+        "$AH = OA \\cdot \\sin 60^\\circ = 6 \\cdot \\dfrac{\\sqrt{3}}{2} = 3\\sqrt{3}$.",
+        "$AB = 2AH = 6\\sqrt{3} \\approx 10{,}39$ (cm)."
+      ]
+    },
+    {
+      "id": "c5q16", "topic": "c5t2", "difficulty": "kho", "type": "tf", "aiGenerated": true,
+      "prompt": "Trong một đường tròn, dây nào gần tâm hơn thì dây đó lớn hơn.",
+      "answer": true,
+      "solution": ["Từ $d = \\sqrt{R^2 - \\left(\\frac{AB}{2}\\right)^2}$: $d$ càng nhỏ thì $AB$ càng lớn. Khẳng định **đúng**."]
+    },
+    {
+      "id": "c5q17", "topic": "c5t2", "difficulty": "kho", "type": "number", "aiGenerated": true,
+      "source": "Bộ đề ôn theo chương (Chương 5, Đề 1 – tự luận câu 3)",
+      "prompt": "Cho đường tròn tâm $O$, hai dây $AB$ và $CD$ vuông góc với nhau tại $M$. Biết $AB = 18$ cm, $CD = 14$ cm, $MC = 4$ cm. Tính khoảng cách từ $O$ đến dây $AB$ (cm).",
+      "answer": "3",
+      "solution": [
+        "Gọi $H, K$ lần lượt là trung điểm $CD, AB$ thì $OH \\perp CD$, $OK \\perp AB$.",
+        "Tứ giác $OKMH$ có ba góc vuông nên là hình chữ nhật, suy ra $OK = MH$.",
+        "$CH = \\dfrac{14}{2} = 7$, $MH = CH - MC = 7 - 4 = 3$. Vậy khoảng cách từ $O$ đến $AB$ là $3$ cm."
+      ]
+    },
+    {
+      "id": "c5q18", "topic": "c5t2", "difficulty": "kho", "type": "mcq", "aiGenerated": true,
+      "prompt": "Trên đường tròn $(O)$ lấy lần lượt ba điểm $A, B, C$ sao cho số đo cung $AB$ (không chứa $C$) là $100^\\circ$ và cung $BC$ (không chứa $A$) là $120^\\circ$. Số đo cung $CA$ không chứa $B$ là",
+      "options": ["$140^\\circ$", "$120^\\circ$", "$220^\\circ$", "$80^\\circ$"],
+      "answer": 0,
+      "solution": ["Ba cung $AB$, $BC$, $CA$ ghép lại thành cả đường tròn.", "Cung $CA = 360^\\circ - 100^\\circ - 120^\\circ = 140^\\circ$."]
+    },
+    {
+      "id": "c5q19", "topic": "c5t3", "difficulty": "de", "type": "mcq", "aiGenerated": true,
+      "prompt": "Độ dài cung tròn $n^\\circ$ của đường tròn bán kính $R$ là",
+      "options": ["$\\dfrac{\\pi R n}{180}$", "$\\dfrac{\\pi R^2 n}{360}$", "$\\dfrac{\\pi R n}{360}$", "$2\\pi R$"],
+      "answer": 0,
+      "solution": ["Cả đường tròn ($360^\\circ$) dài $2\\pi R$ nên cung $n^\\circ$ dài $\\dfrac{2\\pi R \\cdot n}{360} = \\dfrac{\\pi R n}{180}$."]
+    },
+    {
+      "id": "c5q20", "topic": "c5t3", "difficulty": "de", "type": "number", "aiGenerated": true,
+      "prompt": "Chu vi đường tròn bán kính $5$ cm có dạng $k\\pi$ (cm). Tìm $k$.",
+      "answer": "10",
+      "solution": ["$C = 2\\pi R = 2\\pi \\cdot 5 = 10\\pi$. Vậy $k = 10$."]
+    },
+    {
+      "id": "c5q21", "topic": "c5t3", "difficulty": "de", "type": "tf", "aiGenerated": true,
+      "prompt": "Diện tích hình quạt tròn bán kính $R$, độ dài cung $\\ell$ là $\\dfrac{\\ell R}{2}$.",
+      "answer": true,
+      "solution": ["$S = \\dfrac{\\pi R^2 n}{360} = \\dfrac{\\pi R n}{180} \\cdot \\dfrac{R}{2} = \\dfrac{\\ell R}{2}$. Khẳng định **đúng**."]
+    },
+    {
+      "id": "c5q22", "topic": "c5t3", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "prompt": "Diện tích hình quạt tròn bán kính $6$ cm, góc ở tâm $90^\\circ$ có dạng $k\\pi$ (cm²). Tìm $k$.",
+      "answer": "9",
+      "solution": ["$S = \\dfrac{\\pi \\cdot 6^2 \\cdot 90}{360} = 9\\pi$. Vậy $k = 9$."]
+    },
+    {
+      "id": "c5q23", "topic": "c5t3", "difficulty": "tb", "type": "mcq", "aiGenerated": true,
+      "prompt": "Diện tích hình vành khuyên giới hạn bởi hai đường tròn đồng tâm bán kính $5$ cm và $3$ cm là",
+      "options": ["$16\\pi$ cm²", "$4\\pi$ cm²", "$2\\pi$ cm²", "$34\\pi$ cm²"],
+      "answer": 0,
+      "solution": ["$S = \\pi(5^2 - 3^2) = \\pi(25 - 9) = 16\\pi$ (cm²)."]
+    },
+    {
+      "id": "c5q24", "topic": "c5t3", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "source": "Bộ đề ôn theo chương (Chương 5, Đề 3 – tự luận câu 4)",
+      "prompt": "Một hình quạt tròn có bán kính $2$ dm và góc ở tâm $150^\\circ$. Tính độ dài cung tương ứng (dm, làm tròn đến hàng phần trăm).",
+      "answer": "5,24",
+      "solution": ["$\\ell = \\dfrac{\\pi \\cdot 2 \\cdot 150}{180} = \\dfrac{5\\pi}{3}$.", "$\\ell \\approx 5{,}236 \\approx 5{,}24$ dm."]
+    },
+    {
+      "id": "c5q25", "topic": "c5t3", "difficulty": "kho", "type": "number", "aiGenerated": true,
+      "source": "Phỏng theo đề cương (.docx), Bài 21 — số liệu do AI chọn",
+      "prompt": "Tính diện tích hình quạt tròn có bán kính $4$ cm và độ dài cung tương ứng là $3$ cm (cm²).",
+      "answer": "6",
+      "solution": ["$S = \\dfrac{\\ell R}{2} = \\dfrac{3 \\cdot 4}{2} = 6$ (cm²)."]
+    },
+    {
+      "id": "c5q26", "topic": "c5t3", "difficulty": "kho", "type": "number", "aiGenerated": true,
+      "source": "Bộ đề ôn theo chương (Chương 5, Đề 8 – tự luận câu 3)",
+      "prompt": "Tính diện tích hình vành khuyên tạo bởi hai đường tròn đồng tâm có bán kính $R_1 = 10{,}5$ cm và $R_2 = 7{,}8$ cm (cm², làm tròn đến hàng đơn vị).",
+      "answer": "155",
+      "solution": ["$S = \\pi(10{,}5^2 - 7{,}8^2) = \\pi(110{,}25 - 60{,}84) = 49{,}41\\pi$.", "$S \\approx 155{,}2 \\approx 155$ cm²."]
+    },
+    {
+      "id": "c5q27", "topic": "c5t3", "difficulty": "kho", "type": "tf", "aiGenerated": true,
+      "source": "Phỏng theo bộ đề ôn theo chương (Chương 5, Đề 4 – tự luận câu 3)",
+      "prompt": "Bánh xe đạp có đường kính $650$ mm. Khi bánh xe quay $33$ vòng thì xe đi được khoảng $67{,}4$ m.",
+      "answer": true,
+      "solution": ["Mỗi vòng xe đi được $\\pi d = 0{,}65\\pi \\approx 2{,}042$ m.", "$33$ vòng: $33 \\cdot 2{,}042 \\approx 67{,}4$ m. Khẳng định **đúng**."]
+    },
+    {
+      "id": "c5q28", "topic": "c5t4", "difficulty": "de", "type": "mcq", "aiGenerated": true,
+      "prompt": "Cho đường tròn $(O; 6\\text{ cm})$ và đường thẳng $a$ cách $O$ một khoảng $4$ cm. Vị trí tương đối của $a$ và $(O)$ là",
+      "options": ["cắt nhau", "tiếp xúc", "không giao nhau", "không xác định"],
+      "answer": 0,
+      "solution": ["$d = 4 < 6 = R$ nên đường thẳng cắt đường tròn tại hai điểm."]
+    },
+    {
+      "id": "c5q29", "topic": "c5t4", "difficulty": "de", "type": "tf", "aiGenerated": true,
+      "prompt": "Tiếp tuyến của đường tròn vuông góc với bán kính đi qua tiếp điểm.",
+      "answer": true,
+      "solution": ["Đây là tính chất của tiếp tuyến. Khẳng định **đúng**."]
+    },
+    {
+      "id": "c5q30", "topic": "c5t4", "difficulty": "de", "type": "mcq", "aiGenerated": true,
+      "prompt": "Một đường thẳng và một đường tròn có nhiều nhất bao nhiêu điểm chung?",
+      "options": ["$2$", "$1$", "$3$", "vô số"],
+      "answer": 0,
+      "solution": ["Khi cắt nhau thì có đúng $2$ điểm chung, đây là số lớn nhất."]
+    },
+    {
+      "id": "c5q31", "topic": "c5t4", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "prompt": "Cho đường tròn $(O; 5\\text{ cm})$, điểm $M$ cách $O$ là $13$ cm. Kẻ tiếp tuyến $MA$ ($A$ là tiếp điểm). Tính $MA$ (cm).",
+      "answer": "12",
+      "solution": ["$OA \\perp MA$: $MA = \\sqrt{MO^2 - OA^2} = \\sqrt{169 - 25} = 12$ (cm)."]
+    },
+    {
+      "id": "c5q32", "topic": "c5t4", "difficulty": "tb", "type": "tf", "aiGenerated": true,
+      "prompt": "Nếu $MA, MB$ là hai tiếp tuyến cắt nhau tại $M$ của $(O)$ ($A, B$ là tiếp điểm) thì $MA = MB$ và $OM \\perp AB$.",
+      "answer": true,
+      "solution": ["Tính chất hai tiếp tuyến cắt nhau: $MA = MB$; $OA = OB$ nên $OM$ là trung trực của $AB$, do đó $OM \\perp AB$. Khẳng định **đúng**."]
+    },
+    {
+      "id": "c5q33", "topic": "c5t4", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "source": "Đề cương HK1 (bài bánh đà động cơ) / Bộ đề ôn (Chương 5, Đề 7)",
+      "prompt": "Bánh đà của một động cơ là đường tròn tâm $O$ bán kính $15$ cm, được kéo bởi dây curoa từ trục mô tơ tại $M$, với $OM = 35$ cm. Đoạn dây curoa $MA$ là tiếp tuyến của đường tròn. Tính $MA$ (cm, làm tròn đến hàng phần mười).",
+      "answer": "31,6",
+      "solution": ["$MA = \\sqrt{OM^2 - OA^2} = \\sqrt{35^2 - 15^2} = \\sqrt{1000}$.", "$\\sqrt{1000} \\approx 31{,}62 \\approx 31{,}6$ cm."]
+    },
+    {
+      "id": "c5q34", "topic": "c5t4", "difficulty": "kho", "type": "mcq", "aiGenerated": true,
+      "prompt": "Từ điểm $M$ với $OM = 2R$ kẻ hai tiếp tuyến $MA, MB$ tới $(O; R)$. Số đo $\\widehat{AMB}$ là",
+      "options": ["$60^\\circ$", "$30^\\circ$", "$90^\\circ$", "$120^\\circ$"],
+      "answer": 0,
+      "solution": ["$\\sin\\widehat{AMO} = \\dfrac{OA}{OM} = \\dfrac{1}{2} \\Rightarrow \\widehat{AMO} = 30^\\circ$.", "$MO$ là phân giác nên $\\widehat{AMB} = 60^\\circ$."]
+    },
+    {
+      "id": "c5q35", "topic": "c5t4", "difficulty": "kho", "type": "number", "aiGenerated": true,
+      "source": "Bộ đề ôn theo chương (Chương 5, Đề 8 – tự luận câu 1)",
+      "prompt": "Đường tròn $(O)$ nằm trong và tiếp xúc với ba cạnh của tam giác $ABC$ lần lượt tại $M \\in AB$, $P \\in BC$, $E \\in CA$. Biết $AM = 6$ cm, $BP = 3$ cm, $CE = 8$ cm. Tính chu vi tam giác $ABC$ (cm).",
+      "answer": "34",
+      "solution": [
+        "Các đoạn tiếp tuyến kẻ từ một điểm bằng nhau: $AE = AM = 6$, $BM = BP = 3$, $CP = CE = 8$.",
+        "Chu vi $= 2(6 + 3 + 8) = 34$ (cm)."
+      ]
+    },
+    {
+      "id": "c5q36", "topic": "c5t4", "difficulty": "kho", "type": "number", "aiGenerated": true,
+      "source": "Đề cương HK1, Bài 39 (vệ tinh địa tĩnh)",
+      "prompt": "Một vệ tinh địa tĩnh cách bề mặt Trái Đất $35\\,786$ km, tâm quỹ đạo trùng tâm Trái Đất (bán kính $6\\,400$ km). Vị trí xa nhất trên mặt đất nhận được tín hiệu (theo đường tiếp tuyến) cách vệ tinh bao nhiêu km (làm tròn đến hàng đơn vị)?",
+      "answer": "41698",
+      "solution": [
+        "Khoảng cách từ vệ tinh $S$ đến tâm $O$: $OS = 6400 + 35786 = 42186$ km.",
+        "Đường tín hiệu $SA$ tiếp xúc Trái Đất tại $A$ nên $OA \\perp SA$: $SA = \\sqrt{42186^2 - 6400^2}$.",
+        "$SA = \\sqrt{1\\,738\\,698\\,596} \\approx 41\\,697{,}7 \\approx 41\\,698$ km."
+      ]
+    },
+    {
+      "id": "c5q37", "topic": "c5t5", "difficulty": "de", "type": "mcq", "aiGenerated": true,
+      "prompt": "Cho $(O; 5\\text{ cm})$ và $(O'; 3\\text{ cm})$ có $OO' = 8$ cm. Vị trí tương đối của hai đường tròn là",
+      "options": ["tiếp xúc ngoài", "cắt nhau", "tiếp xúc trong", "ở ngoài nhau"],
+      "answer": 0,
+      "solution": ["$OO' = 8 = 5 + 3 = R + r$ nên hai đường tròn tiếp xúc ngoài."]
+    },
+    {
+      "id": "c5q38", "topic": "c5t5", "difficulty": "de", "type": "tf", "aiGenerated": true,
+      "prompt": "Hai đường tròn cắt nhau thì đường nối tâm là đường trung trực của dây chung.",
+      "answer": true,
+      "solution": ["$O$ và $O'$ đều cách đều hai giao điểm $A, B$ nên $OO'$ là trung trực của $AB$. Khẳng định **đúng**."]
+    },
+    {
+      "id": "c5q39", "topic": "c5t5", "difficulty": "de", "type": "number", "aiGenerated": true,
+      "prompt": "Hai đường tròn tiếp xúc ngoài có bán kính $7$ cm và $4$ cm. Tính độ dài đoạn nối tâm (cm).",
+      "answer": "11",
+      "solution": ["Tiếp xúc ngoài: $OO' = R + r = 7 + 4 = 11$ (cm)."]
+    },
+    {
+      "id": "c5q40", "topic": "c5t5", "difficulty": "tb", "type": "mcq", "aiGenerated": true,
+      "prompt": "Cho $(O; 6\\text{ cm})$ và $(O'; 2\\text{ cm})$ có $OO' = 3$ cm. Vị trí tương đối của hai đường tròn là",
+      "options": ["cắt nhau", "tiếp xúc trong", "đựng nhau", "ở ngoài nhau"],
+      "answer": 2,
+      "solution": ["$R - r = 6 - 2 = 4$ và $OO' = 3 < 4$.", "$OO' < R - r$ nên $(O)$ đựng $(O')$."]
+    },
+    {
+      "id": "c5q41", "topic": "c5t5", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "prompt": "Hai đường tròn bán kính $9$ cm và $4$ cm tiếp xúc trong. Tính độ dài đoạn nối tâm (cm).",
+      "answer": "5",
+      "solution": ["Tiếp xúc trong: $OO' = R - r = 9 - 4 = 5$ (cm)."]
+    },
+    {
+      "id": "c5q42", "topic": "c5t5", "difficulty": "tb", "type": "tf", "aiGenerated": true,
+      "prompt": "Cho $(O; 4\\text{ cm})$ và $(O'; 3\\text{ cm})$ với $OO' = 6$ cm. Hai đường tròn có hai điểm chung.",
+      "answer": true,
+      "solution": ["$R - r = 1$, $R + r = 7$, và $1 < 6 < 7$.", "Hai đường tròn cắt nhau nên có $2$ điểm chung. Khẳng định **đúng**."]
+    },
+    {
+      "id": "c5q43", "topic": "c5t5", "difficulty": "kho", "type": "number", "aiGenerated": true,
+      "source": "Bộ đề ôn theo chương (Chương 5, Đề 10 – trả lời ngắn câu 3)",
+      "prompt": "Hai đường tròn $(O; 15\\text{ cm})$ và $(O'; 13\\text{ cm})$ cắt nhau tại $A, B$ với $AB = 24$ cm, $O$ và $O'$ nằm khác phía đối với $AB$. Tính $OO'$ (cm).",
+      "answer": "14",
+      "solution": [
+        "Gọi $H$ là giao điểm của $AB$ và $OO'$ thì $AH = 12$ và $AH \\perp OO'$.",
+        "$OH = \\sqrt{15^2 - 12^2} = 9$, $\\ O'H = \\sqrt{13^2 - 12^2} = 5$.",
+        "$O, O'$ khác phía nên $OO' = 9 + 5 = 14$ (cm)."
+      ]
+    },
+    {
+      "id": "c5q44", "topic": "c5t5", "difficulty": "kho", "type": "mcq", "aiGenerated": true,
+      "source": "Bộ đề ôn theo chương (Chương 5, Đề 10 – trắc nghiệm câu 7)",
+      "prompt": "Hai đường tròn $(O; 20\\text{ cm})$ và $(O'; 15\\text{ cm})$ cắt nhau tại $A, B$ với $AB = 24$ cm, $O$ và $O'$ nằm cùng phía đối với $AB$. Độ dài $OO'$ là",
+      "options": ["$7$ cm", "$8$ cm", "$9$ cm", "$25$ cm"],
+      "answer": 0,
+      "solution": [
+        "$AH = 12$ ($H$ là trung điểm $AB$, nằm trên $OO'$).",
+        "$OH = \\sqrt{20^2 - 12^2} = 16$, $\\ O'H = \\sqrt{15^2 - 12^2} = 9$.",
+        "Cùng phía nên $OO' = 16 - 9 = 7$ (cm)."
+      ]
+    },
+    {
+      "id": "c5q45", "topic": "c5t5", "difficulty": "kho", "type": "number", "aiGenerated": true,
+      "prompt": "Hai đường tròn $(O; 15\\text{ cm})$ và $(O'; 20\\text{ cm})$ có $OO' = 25$ cm, cắt nhau tại $A$ và $B$. Tính độ dài dây chung $AB$ (cm).",
+      "answer": "24",
+      "solution": [
+        "$15^2 + 20^2 = 625 = 25^2$ nên tam giác $OAO'$ vuông tại $A$.",
+        "Đường cao $AH = \\dfrac{OA \\cdot O'A}{OO'} = \\dfrac{15 \\cdot 20}{25} = 12$.",
+        "$AB = 2AH = 24$ (cm)."
+      ]
+    },
+    {
+      "id": "c5q46", "topic": "c5t5", "difficulty": "kho", "type": "tf", "aiGenerated": true,
+      "prompt": "Hai đường tròn $(O; 3\\text{ cm})$ và $(O'; 1\\text{ cm})$ tiếp xúc ngoài. Độ dài đoạn tiếp tuyến chung ngoài (giữa hai tiếp điểm) bằng $2\\sqrt{3}$ cm.",
+      "answer": true,
+      "solution": [
+        "$OO' = 3 + 1 = 4$. Gọi tiếp tuyến chung ngoài tiếp xúc tại $B, C$; kẻ $O'K \\perp OB$ thì $O'K = BC$ và $OK = 3 - 1 = 2$.",
+        "$BC = \\sqrt{OO'^2 - OK^2} = \\sqrt{16 - 4} = \\sqrt{12} = 2\\sqrt{3}$ (cm). Khẳng định **đúng**."
+      ]
+    }
+  ]
+}

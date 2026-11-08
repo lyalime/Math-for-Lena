@@ -1,0 +1,440 @@
+{
+  "id": 1,
+  "title": "Phương trình và hệ phương trình bậc nhất hai ẩn",
+  "short": "Hệ PT bậc nhất hai ẩn",
+  "doodle": "lines",
+  "status": "ready",
+  "topics": [
+    {
+      "id": "c1t1",
+      "title": "Phương trình bậc nhất hai ẩn",
+      "aiGenerated": true,
+      "summary": "Phương trình dạng $ax + by = c$ luôn có vô số nghiệm; mỗi nghiệm là một cặp số $(x_0; y_0)$ và tập nghiệm là một đường thẳng.",
+      "points": [
+        "Dạng tổng quát: $ax + by = c$, trong đó $a, b, c$ là các số đã biết và $a \\neq 0$ hoặc $b \\neq 0$.",
+        "Cặp số $(x_0; y_0)$ là nghiệm nếu $a x_0 + b y_0 = c$ là đẳng thức đúng.",
+        "Phương trình bậc nhất hai ẩn luôn có **vô số nghiệm**.",
+        "Nếu $b \\neq 0$: tập nghiệm là đường thẳng $y = -\\dfrac{a}{b}x + \\dfrac{c}{b}$.",
+        "Nếu $a = 0,\\ b \\neq 0$: tập nghiệm là đường thẳng $y = \\dfrac{c}{b}$ (song song hoặc trùng trục $Ox$). Nếu $b = 0,\\ a \\neq 0$: đường thẳng $x = \\dfrac{c}{a}$ (song song hoặc trùng trục $Oy$)."
+      ],
+      "formulas": [
+        { "id": "c1t1f1", "front": "Dạng tổng quát của phương trình bậc nhất hai ẩn", "back": "$ax + by = c$ với $a \\neq 0$ hoặc $b \\neq 0$" },
+        { "id": "c1t1f2", "front": "Khi nào $(x_0; y_0)$ là nghiệm của $ax + by = c$?", "back": "Khi $a x_0 + b y_0 = c$ (thay vào thấy đúng)" },
+        { "id": "c1t1f3", "front": "Nghiệm tổng quát của $ax + by = c$ khi $b \\neq 0$", "back": "$\\left(x;\\ \\dfrac{c - ax}{b}\\right)$ với $x \\in \\mathbb{R}$" },
+        { "id": "c1t1f4", "front": "Tập nghiệm của $0x + by = c$ $(b \\neq 0)$", "back": "Đường thẳng $y = \\dfrac{c}{b}$, song song hoặc trùng $Ox$" },
+        { "id": "c1t1f5", "front": "Tập nghiệm của $ax + 0y = c$ $(a \\neq 0)$", "back": "Đường thẳng $x = \\dfrac{c}{a}$, song song hoặc trùng $Oy$" }
+      ],
+      "example": {
+        "problem": "Viết nghiệm tổng quát và biểu diễn hình học tập nghiệm của phương trình $2x - y = 3$.",
+        "steps": [
+          "Rút $y$ theo $x$: $y = 2x - 3$.",
+          "Nghiệm tổng quát: $(x;\\ 2x - 3)$ với $x \\in \\mathbb{R}$.",
+          "Cho $x = 0 \\Rightarrow y = -3$; cho $y = 0 \\Rightarrow x = \\tfrac{3}{2}$.",
+          "Tập nghiệm là đường thẳng $y = 2x - 3$ đi qua hai điểm $(0; -3)$ và $\\left(\\tfrac{3}{2}; 0\\right)$."
+        ]
+      }
+    },
+    {
+      "id": "c1t2",
+      "title": "Hệ hai phương trình bậc nhất hai ẩn",
+      "aiGenerated": true,
+      "summary": "Giải hệ bằng phương pháp thế hoặc cộng đại số; so sánh tỉ số các hệ số để biết hệ có một, không có hay vô số nghiệm.",
+      "points": [
+        "Hệ $\\begin{cases} ax + by = c \\\\ a'x + b'y = c' \\end{cases}$. Nghiệm chung của hai phương trình là nghiệm của hệ.",
+        "**Phương pháp thế:** từ một phương trình rút một ẩn theo ẩn kia, thế vào phương trình còn lại để được phương trình một ẩn.",
+        "**Phương pháp cộng đại số:** nhân hai vế để hệ số của một ẩn bằng nhau hoặc đối nhau, rồi trừ hoặc cộng từng vế.",
+        "Với $a', b', c' \\neq 0$: $\\dfrac{a}{a'} \\neq \\dfrac{b}{b'}$ thì có nghiệm duy nhất; $\\dfrac{a}{a'} = \\dfrac{b}{b'} \\neq \\dfrac{c}{c'}$ thì vô nghiệm; $\\dfrac{a}{a'} = \\dfrac{b}{b'} = \\dfrac{c}{c'}$ thì vô số nghiệm.",
+        "**Đặt ẩn phụ:** khi hệ chứa $\\dfrac{1}{x}, \\dfrac{1}{y}$ hoặc một biểu thức lặp lại, đặt $u, v$ để đưa về hệ bậc nhất, nhớ điều kiện xác định."
+      ],
+      "formulas": [
+        { "id": "c1t2f1", "front": "Các bước của phương pháp thế", "back": "Rút một ẩn → thế vào PT còn lại → giải PT một ẩn → tìm ẩn kia" },
+        { "id": "c1t2f2", "front": "Ý tưởng phương pháp cộng đại số", "back": "Làm cho hệ số của một ẩn bằng nhau (trừ vế) hoặc đối nhau (cộng vế)" },
+        { "id": "c1t2f3", "front": "Hệ có nghiệm duy nhất khi", "back": "$\\dfrac{a}{a'} \\neq \\dfrac{b}{b'}$" },
+        { "id": "c1t2f4", "front": "Hệ vô nghiệm khi", "back": "$\\dfrac{a}{a'} = \\dfrac{b}{b'} \\neq \\dfrac{c}{c'}$ (hai đường thẳng song song)" },
+        { "id": "c1t2f5", "front": "Hệ vô số nghiệm khi", "back": "$\\dfrac{a}{a'} = \\dfrac{b}{b'} = \\dfrac{c}{c'}$ (hai đường thẳng trùng nhau)" },
+        { "id": "c1t2f6", "front": "Hệ chứa $\\dfrac{1}{x}, \\dfrac{1}{y}$ thì làm gì?", "back": "Đặt $u = \\dfrac{1}{x},\\ v = \\dfrac{1}{y}$ (ĐK $x, y \\neq 0$), giải hệ theo $u, v$" }
+      ],
+      "example": {
+        "problem": "Giải hệ phương trình $\\begin{cases} 2x + y = 5 \\\\ x - y = 1 \\end{cases}$.",
+        "steps": [
+          "Hệ số của $y$ đối nhau ($1$ và $-1$) nên cộng từng vế: $3x = 6$.",
+          "Suy ra $x = 2$.",
+          "Thế vào $x - y = 1$: $2 - y = 1 \\Rightarrow y = 1$.",
+          "Thử lại: $2\\cdot 2 + 1 = 5$ ✓, $2 - 1 = 1$ ✓. Vậy hệ có nghiệm duy nhất $(2; 1)$."
+        ]
+      }
+    },
+    {
+      "id": "c1t3",
+      "title": "Giải bài toán bằng cách lập hệ phương trình",
+      "aiGenerated": true,
+      "summary": "Chọn hai ẩn kèm điều kiện, biểu diễn các đại lượng theo ẩn, lập hai phương trình, giải rồi đối chiếu điều kiện.",
+      "points": [
+        "**Bước 1:** chọn ẩn và đặt điều kiện thích hợp; biểu diễn các đại lượng chưa biết theo ẩn; lập hệ phương trình.",
+        "**Bước 2:** giải hệ phương trình.",
+        "**Bước 3:** đối chiếu điều kiện rồi kết luận (có đơn vị).",
+        "Chuyển động: $s = v \\cdot t$. Xuôi dòng: $v_{\\text{riêng}} + v_{\\text{nước}}$; ngược dòng: $v_{\\text{riêng}} - v_{\\text{nước}}$.",
+        "Làm chung: làm xong trong $x$ giờ thì mỗi giờ làm được $\\dfrac{1}{x}$ công việc. Vượt mức $a\\%$: thực tế bằng $\\left(1 + \\dfrac{a}{100}\\right)$ lần kế hoạch.",
+        "Số có hai chữ số: $\\overline{ab} = 10a + b$ với $1 \\le a \\le 9,\\ 0 \\le b \\le 9$. Chia có dư: $A = B \\cdot q + r$ với $0 \\le r < B$."
+      ],
+      "formulas": [
+        { "id": "c1t3f1", "front": "3 bước giải bài toán bằng cách lập hệ phương trình", "back": "Chọn ẩn + điều kiện, lập hệ → Giải hệ → Đối chiếu điều kiện, kết luận" },
+        { "id": "c1t3f2", "front": "Vận tốc xuôi dòng / ngược dòng", "back": "$v_{\\text{xuôi}} = v + v_n$, $\\quad v_{\\text{ngược}} = v - v_n$" },
+        { "id": "c1t3f3", "front": "Làm một mình xong trong $x$ giờ thì 1 giờ làm được", "back": "$\\dfrac{1}{x}$ công việc" },
+        { "id": "c1t3f4", "front": "Kế hoạch $x$, thực tế vượt mức $a\\%$", "back": "Thực tế: $x + \\dfrac{a}{100}x = \\left(1 + \\dfrac{a}{100}\\right)x$" },
+        { "id": "c1t3f5", "front": "Số có hai chữ số $\\overline{ab}$", "back": "$10a + b$, với $1 \\le a \\le 9$, $0 \\le b \\le 9$" },
+        { "id": "c1t3f6", "front": "$A$ chia $B$ được thương $q$, dư $r$", "back": "$A = Bq + r$ với $0 \\le r < B$" }
+      ],
+      "example": {
+        "problem": "Tìm hai số tự nhiên có tổng bằng $1006$, biết rằng lấy số lớn chia cho số nhỏ thì được thương là $2$ và số dư là $124$.",
+        "steps": [
+          "Gọi số lớn là $x$, số nhỏ là $y$ ($x, y \\in \\mathbb{N}$, $y > 124$).",
+          "Tổng bằng $1006$: $x + y = 1006$. Phép chia có dư: $x = 2y + 124$.",
+          "Thế vào: $2y + 124 + y = 1006 \\Rightarrow 3y = 882 \\Rightarrow y = 294$.",
+          "Suy ra $x = 1006 - 294 = 712$. Đối chiếu: $294 > 124$ ✓. Vậy hai số là $712$ và $294$."
+        ],
+        "source": "Phỏng theo đề cương HK1 (bài tìm hai số có tổng 1006)"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "c1q01", "topic": "c1t1", "difficulty": "de", "type": "mcq", "aiGenerated": true,
+      "prompt": "Phương trình nào sau đây là phương trình bậc nhất hai ẩn?",
+      "options": ["$x^2 + y = 1$", "$2x - 3y = 5$", "$0x + 0y = 4$", "$xy + x = 2$"],
+      "answer": 1,
+      "solution": [
+        "Phương trình bậc nhất hai ẩn có dạng $ax + by = c$ với $a \\neq 0$ hoặc $b \\neq 0$.",
+        "$x^2 + y = 1$ có $x^2$; $xy + x = 2$ có tích $xy$ nên không phải bậc nhất.",
+        "$0x + 0y = 4$ có $a = b = 0$ nên loại.",
+        "Chỉ $2x - 3y = 5$ thoả mãn ($a = 2,\\ b = -3$)."
+      ]
+    },
+    {
+      "id": "c1q02", "topic": "c1t1", "difficulty": "de", "type": "mcq", "aiGenerated": true,
+      "prompt": "Cặp số nào sau đây là nghiệm của phương trình $2x - y = 1$?",
+      "options": ["$(0; 1)$", "$(1; 1)$", "$(1; 0)$", "$(-1; 0)$"],
+      "answer": 1,
+      "solution": [
+        "Thay từng cặp vào vế trái $2x - y$.",
+        "$(0;1)$: $0 - 1 = -1$; $(1;0)$: $2 - 0 = 2$; $(-1;0)$: $-2 - 0 = -2$.",
+        "$(1;1)$: $2 - 1 = 1$ ✓. Vậy chọn $(1; 1)$."
+      ]
+    },
+    {
+      "id": "c1q03", "topic": "c1t1", "difficulty": "de", "type": "tf", "aiGenerated": true,
+      "prompt": "Phương trình $0x + 3y = 6$ là phương trình bậc nhất hai ẩn.",
+      "answer": true,
+      "solution": [
+        "Có $a = 0$ nhưng $b = 3 \\neq 0$.",
+        "Điều kiện chỉ cần $a \\neq 0$ hoặc $b \\neq 0$, nên đây là phương trình bậc nhất hai ẩn. Khẳng định **đúng**."
+      ]
+    },
+    {
+      "id": "c1q04", "topic": "c1t1", "difficulty": "de", "type": "number", "aiGenerated": true,
+      "prompt": "Cho phương trình $3x + 2y = 4$. Tìm $y_0$ để cặp số $(4; y_0)$ là nghiệm của phương trình.",
+      "answer": "-4",
+      "solution": [
+        "Thay $x = 4$: $3 \\cdot 4 + 2y_0 = 4$.",
+        "$12 + 2y_0 = 4 \\Rightarrow 2y_0 = -8 \\Rightarrow y_0 = -4$."
+      ]
+    },
+    {
+      "id": "c1q05", "topic": "c1t1", "difficulty": "tb", "type": "mcq", "aiGenerated": true,
+      "prompt": "Viết phương trình $x + 2y - 1 = 0$ về dạng $ax + by = c$. Các hệ số $a, b, c$ lần lượt là",
+      "options": ["$a = 1;\\ b = 2;\\ c = -1$", "$a = 1;\\ b = 2;\\ c = 1$", "$a = 1;\\ b = -2;\\ c = 1$", "$a = 0;\\ b = 2;\\ c = 1$"],
+      "answer": 1,
+      "solution": [
+        "Chuyển $-1$ sang vế phải: $x + 2y = 1$.",
+        "So sánh với $ax + by = c$: $a = 1,\\ b = 2,\\ c = 1$."
+      ]
+    },
+    {
+      "id": "c1q06", "topic": "c1t1", "difficulty": "tb", "type": "mcq", "aiGenerated": true,
+      "prompt": "Tất cả các nghiệm của phương trình $2x - 3y = 1$ được biểu diễn bởi đường thẳng nào?",
+      "options": ["$y = -2x + 1$", "$y = 2x - 1$", "$y = \\dfrac{2}{3}x - \\dfrac{1}{3}$", "$y = \\dfrac{2}{3}x + \\dfrac{1}{3}$"],
+      "answer": 2,
+      "solution": [
+        "Rút $y$: $3y = 2x - 1$.",
+        "Chia hai vế cho $3$: $y = \\dfrac{2}{3}x - \\dfrac{1}{3}$."
+      ]
+    },
+    {
+      "id": "c1q07", "topic": "c1t1", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "prompt": "Tìm $m$ để phương trình $mx - 5y + 1 = 0$ nhận cặp số $(1; 2)$ làm nghiệm.",
+      "answer": "9",
+      "solution": [
+        "Thay $x = 1,\\ y = 2$: $m \\cdot 1 - 5 \\cdot 2 + 1 = 0$.",
+        "$m - 10 + 1 = 0 \\Rightarrow m = 9$."
+      ]
+    },
+    {
+      "id": "c1q08", "topic": "c1t1", "difficulty": "tb", "type": "tf", "aiGenerated": true,
+      "prompt": "Tập nghiệm của phương trình $3x + 0y = 6$ được biểu diễn bởi đường thẳng $y = 2$.",
+      "answer": false,
+      "solution": [
+        "Phương trình $3x + 0y = 6 \\Leftrightarrow x = 2$, còn $y$ tuỳ ý.",
+        "Tập nghiệm là đường thẳng $x = 2$ (song song với $Oy$), không phải $y = 2$. Khẳng định **sai**."
+      ]
+    },
+    {
+      "id": "c1q09", "topic": "c1t1", "difficulty": "kho", "type": "number", "aiGenerated": true,
+      "prompt": "Trong các cặp số $(1; 2),\\ (1; -2),\\ (2; 3),\\ (3; -5),\\ \\left(\\tfrac{1}{3}; 0\\right)$, có bao nhiêu cặp là nghiệm của phương trình $3x - y = 1$?",
+      "answer": "2",
+      "solution": [
+        "Tính $3x - y$ với từng cặp.",
+        "$(1;2)$: $3 - 2 = 1$ ✓. $(1;-2)$: $3 + 2 = 5$. $(2;3)$: $6 - 3 = 3$. $(3;-5)$: $9 + 5 = 14$.",
+        "$\\left(\\tfrac{1}{3}; 0\\right)$: $1 - 0 = 1$ ✓.",
+        "Có $2$ cặp là nghiệm."
+      ]
+    },
+    {
+      "id": "c1q10", "topic": "c1t1", "difficulty": "kho", "type": "mcq", "aiGenerated": true,
+      "prompt": "Đường thẳng biểu diễn tập nghiệm của phương trình $(m - 1)x + 2y = 4$ song song với trục $Ox$ khi",
+      "options": ["$m = 0$", "$m = 1$", "$m = 2$", "$m = -1$"],
+      "answer": 1,
+      "solution": [
+        "Đường thẳng song song với $Ox$ có dạng $y = k$ với $k \\neq 0$, tức là hệ số của $x$ bằng $0$.",
+        "$m - 1 = 0 \\Rightarrow m = 1$. Khi đó $2y = 4 \\Rightarrow y = 2 \\neq 0$, nên song song (không trùng) với $Ox$."
+      ]
+    },
+    {
+      "id": "c1q11", "topic": "c1t1", "difficulty": "kho", "type": "tf", "aiGenerated": true,
+      "prompt": "Đường thẳng biểu diễn tập nghiệm của $x + 2y = 4$ đi qua điểm $(2; 1)$ và cắt trục $Oy$ tại điểm $(0; 2)$.",
+      "answer": true,
+      "solution": [
+        "Thay $(2;1)$: $2 + 2 \\cdot 1 = 4$ ✓.",
+        "Cho $x = 0$: $2y = 4 \\Rightarrow y = 2$, giao điểm với $Oy$ là $(0; 2)$ ✓. Khẳng định **đúng**."
+      ]
+    },
+    {
+      "id": "c1q12", "topic": "c1t2", "difficulty": "de", "type": "mcq", "aiGenerated": true,
+      "prompt": "Cặp số nào là nghiệm của hệ $\\begin{cases} x + y = 0 \\\\ x + 3y = 4 \\end{cases}$?",
+      "options": ["$(0; 1)$", "$(2; 2)$", "$(3; -3)$", "$(-2; 2)$"],
+      "answer": 3,
+      "solution": [
+        "Trừ từng vế (PT2 − PT1): $2y = 4 \\Rightarrow y = 2$.",
+        "Từ $x + y = 0$: $x = -2$. Nghiệm là $(-2; 2)$."
+      ]
+    },
+    {
+      "id": "c1q13", "topic": "c1t2", "difficulty": "de", "type": "number", "aiGenerated": true,
+      "prompt": "Biết $(x; y)$ là nghiệm của hệ $\\begin{cases} 2x + y = 7 \\\\ x - y = 2 \\end{cases}$. Tìm $x$.",
+      "answer": "3",
+      "solution": [
+        "Cộng từng vế: $3x = 9 \\Rightarrow x = 3$.",
+        "(Khi đó $y = x - 2 = 1$.)"
+      ]
+    },
+    {
+      "id": "c1q14", "topic": "c1t2", "difficulty": "de", "type": "tf", "aiGenerated": true,
+      "prompt": "Hệ $\\begin{cases} x^2 - 4y^2 = 0 \\\\ 3x + 2y = 7 \\end{cases}$ là hệ hai phương trình bậc nhất hai ẩn.",
+      "answer": false,
+      "solution": [
+        "Phương trình thứ nhất chứa $x^2$ và $y^2$ nên không phải phương trình bậc nhất.",
+        "Vậy đây không phải hệ hai phương trình bậc nhất hai ẩn. Khẳng định **sai**."
+      ]
+    },
+    {
+      "id": "c1q15", "topic": "c1t2", "difficulty": "tb", "type": "mcq", "aiGenerated": true,
+      "prompt": "Nghiệm của hệ $\\begin{cases} 3x - 2y = 4 \\\\ 2x + y = 5 \\end{cases}$ là",
+      "options": ["$(2; 1)$", "$(1; 2)$", "$(2; -1)$", "$(-2; 1)$"],
+      "answer": 0,
+      "solution": [
+        "Từ PT2: $y = 5 - 2x$.",
+        "Thế vào PT1: $3x - 2(5 - 2x) = 4 \\Rightarrow 7x - 10 = 4 \\Rightarrow x = 2$.",
+        "$y = 5 - 4 = 1$. Nghiệm $(2; 1)$."
+      ]
+    },
+    {
+      "id": "c1q16", "topic": "c1t2", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "prompt": "Biết $(x; y)$ là nghiệm của hệ $\\begin{cases} x + 2y = 5 \\\\ 3x - y = 1 \\end{cases}$. Tính $x + y$.",
+      "answer": "3",
+      "solution": [
+        "Từ PT1: $x = 5 - 2y$. Thế vào PT2: $3(5 - 2y) - y = 1 \\Rightarrow 15 - 7y = 1 \\Rightarrow y = 2$.",
+        "$x = 5 - 4 = 1$.",
+        "$x + y = 1 + 2 = 3$."
+      ]
+    },
+    {
+      "id": "c1q17", "topic": "c1t2", "difficulty": "tb", "type": "mcq", "aiGenerated": true,
+      "prompt": "Hệ phương trình $\\begin{cases} 2x - y = 3 \\\\ 4x - 2y = 5 \\end{cases}$",
+      "options": ["có nghiệm duy nhất", "vô nghiệm", "có vô số nghiệm", "có đúng hai nghiệm"],
+      "answer": 1,
+      "solution": [
+        "So sánh tỉ số: $\\dfrac{2}{4} = \\dfrac{-1}{-2} = \\dfrac{1}{2}$, còn $\\dfrac{3}{5} \\neq \\dfrac{1}{2}$.",
+        "$\\dfrac{a}{a'} = \\dfrac{b}{b'} \\neq \\dfrac{c}{c'}$ nên hệ vô nghiệm (hai đường thẳng song song)."
+      ]
+    },
+    {
+      "id": "c1q18", "topic": "c1t2", "difficulty": "tb", "type": "tf", "aiGenerated": true,
+      "prompt": "Hệ $\\begin{cases} x - 2y = 1 \\\\ -2x + 4y = -2 \\end{cases}$ có vô số nghiệm.",
+      "answer": true,
+      "solution": [
+        "$\\dfrac{1}{-2} = \\dfrac{-2}{4} = \\dfrac{1}{-2} = -\\dfrac{1}{2}$.",
+        "Ba tỉ số bằng nhau nên hai đường thẳng trùng nhau, hệ có vô số nghiệm. Khẳng định **đúng**."
+      ]
+    },
+    {
+      "id": "c1q19", "topic": "c1t2", "difficulty": "kho", "type": "number", "aiGenerated": true,
+      "prompt": "Tìm $m$ để hệ $\\begin{cases} mx + y = 3 \\\\ 2x + y = 1 \\end{cases}$ có nghiệm $(x; y)$ với $x = 1$.",
+      "answer": "4",
+      "solution": [
+        "Thay $x = 1$ vào PT2: $2 + y = 1 \\Rightarrow y = -1$.",
+        "Thay $(1; -1)$ vào PT1: $m - 1 = 3 \\Rightarrow m = 4$."
+      ]
+    },
+    {
+      "id": "c1q20", "topic": "c1t2", "difficulty": "kho", "type": "mcq", "aiGenerated": true,
+      "prompt": "Với giá trị nào của $m$ thì hệ $\\begin{cases} mx + 2y = 1 \\\\ 3x + y = 2 \\end{cases}$ vô nghiệm?",
+      "options": ["$m = 6$", "$m = -6$", "$m = 3$", "$m = \\dfrac{2}{3}$"],
+      "answer": 0,
+      "solution": [
+        "Hệ vô nghiệm khi $\\dfrac{m}{3} = \\dfrac{2}{1} \\neq \\dfrac{1}{2}$.",
+        "$\\dfrac{m}{3} = 2 \\Rightarrow m = 6$; và $2 \\neq \\dfrac{1}{2}$ ✓. Vậy $m = 6$."
+      ]
+    },
+    {
+      "id": "c1q21", "topic": "c1t2", "difficulty": "kho", "type": "number", "aiGenerated": true,
+      "prompt": "Giải hệ $\\begin{cases} \\dfrac{1}{x} + \\dfrac{1}{y} = \\dfrac{5}{6} \\\\[4pt] \\dfrac{2}{x} - \\dfrac{1}{y} = \\dfrac{1}{6} \\end{cases}$ rồi tính $x + y$.",
+      "answer": "5",
+      "solution": [
+        "ĐK: $x, y \\neq 0$. Đặt $u = \\dfrac{1}{x},\\ v = \\dfrac{1}{y}$: $\\begin{cases} u + v = \\frac{5}{6} \\\\ 2u - v = \\frac{1}{6} \\end{cases}$.",
+        "Cộng từng vế: $3u = 1 \\Rightarrow u = \\dfrac{1}{3}$, suy ra $v = \\dfrac{5}{6} - \\dfrac{1}{3} = \\dfrac{1}{2}$.",
+        "$x = 3,\\ y = 2$ (thoả ĐK). Vậy $x + y = 5$."
+      ]
+    },
+    {
+      "id": "c1q22", "topic": "c1t2", "difficulty": "kho", "type": "tf", "aiGenerated": true,
+      "prompt": "Hệ $\\begin{cases} x + my = 4 \\\\ nx + y = -3 \\end{cases}$ nhận $(-2; 3)$ làm nghiệm khi $m = 2$ và $n = 3$.",
+      "answer": true,
+      "solution": [
+        "Thay $(-2; 3)$ vào PT1: $-2 + 3m = 4 \\Rightarrow m = 2$.",
+        "Thay vào PT2: $-2n + 3 = -3 \\Rightarrow n = 3$. Khẳng định **đúng**."
+      ]
+    },
+    {
+      "id": "c1q23", "topic": "c1t3", "difficulty": "de", "type": "number", "aiGenerated": true,
+      "prompt": "Tìm hai số biết tổng của chúng bằng $50$ và hiệu bằng $12$. Số lớn là bao nhiêu?",
+      "answer": "31",
+      "solution": [
+        "Gọi số lớn là $x$, số nhỏ là $y$: $\\begin{cases} x + y = 50 \\\\ x - y = 12 \\end{cases}$.",
+        "Cộng từng vế: $2x = 62 \\Rightarrow x = 31$ (và $y = 19$)."
+      ]
+    },
+    {
+      "id": "c1q24", "topic": "c1t3", "difficulty": "de", "type": "mcq", "aiGenerated": true,
+      "source": "Đề cương ôn tập (.docx), Bài 4",
+      "prompt": "Hà mua $3$ kg táo hết $105$ nghìn đồng; Lan mua $1$ kg cam và $4$ kg táo hết $165$ nghìn đồng. Gọi giá $1$ kg táo là $x$, $1$ kg cam là $y$ (nghìn đồng). Hệ phương trình đúng là",
+      "options": [
+        "$\\begin{cases} 3x = 105 \\\\ 4x + y = 165 \\end{cases}$",
+        "$\\begin{cases} 3y = 105 \\\\ 4x + y = 165 \\end{cases}$",
+        "$\\begin{cases} 3x = 105 \\\\ x + 4y = 165 \\end{cases}$",
+        "$\\begin{cases} x + y = 105 \\\\ 4x + y = 165 \\end{cases}$"
+      ],
+      "answer": 0,
+      "solution": [
+        "$3$ kg táo giá $105$ nghìn: $3x = 105$.",
+        "$1$ kg cam và $4$ kg táo giá $165$ nghìn: $4x + y = 165$.",
+        "(Giải ra $x = 35,\\ y = 25$.)"
+      ]
+    },
+    {
+      "id": "c1q25", "topic": "c1t3", "difficulty": "de", "type": "tf", "aiGenerated": true,
+      "prompt": "Một ca nô có vận tốc riêng $v$ km/h, vận tốc dòng nước là $u$ km/h. Khi đi ngược dòng, vận tốc của ca nô là $v + u$ km/h.",
+      "answer": false,
+      "solution": [
+        "Khi ngược dòng, nước cản ca nô: $v_{\\text{ngược}} = v - u$.",
+        "$v + u$ là vận tốc xuôi dòng. Khẳng định **sai**."
+      ]
+    },
+    {
+      "id": "c1q26", "topic": "c1t3", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "source": "Đề cương ôn tập (.docx), Bài 5",
+      "prompt": "Một mảnh vườn hình chữ nhật có chu vi $90$ m, chiều dài hơn chiều rộng $5$ m. Chiều dài mảnh vườn là bao nhiêu mét?",
+      "answer": "25",
+      "solution": [
+        "Gọi chiều dài $x$, chiều rộng $y$ (m), $x > y > 0$.",
+        "Nửa chu vi $45$ m: $x + y = 45$; $x - y = 5$.",
+        "Cộng từng vế: $2x = 50 \\Rightarrow x = 25$ (và $y = 20$)."
+      ]
+    },
+    {
+      "id": "c1q27", "topic": "c1t3", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "source": "Đề cương ôn tập (.docx), Bài 7",
+      "prompt": "Tìm hai số tự nhiên có tổng bằng $297$, biết số lớn chia cho số nhỏ được thương là $6$ và số dư là $31$. Số nhỏ là bao nhiêu?",
+      "answer": "38",
+      "solution": [
+        "Gọi số lớn $x$, số nhỏ $y$ ($y > 31$): $\\begin{cases} x + y = 297 \\\\ x = 6y + 31 \\end{cases}$.",
+        "Thế: $7y + 31 = 297 \\Rightarrow 7y = 266 \\Rightarrow y = 38$.",
+        "$x = 259$; kiểm tra $38 > 31$ ✓. Số nhỏ là $38$."
+      ]
+    },
+    {
+      "id": "c1q28", "topic": "c1t3", "difficulty": "tb", "type": "mcq", "aiGenerated": true,
+      "source": "Phỏng theo đề cương (.docx), Bài 8 — số liệu % do AI chọn",
+      "prompt": "Hai khối 8 và 9 đăng kí quyên góp tổng cộng $1500$ kg giấy vụn. Thực tế khối 8 vượt mức $10\\%$, khối 9 vượt mức $25\\%$, nên cả hai khối góp được $1770$ kg. Khối 9 đã đăng kí bao nhiêu kg?",
+      "options": ["$700$ kg", "$800$ kg", "$750$ kg", "$900$ kg"],
+      "answer": 1,
+      "solution": [
+        "Gọi số kg đăng kí của khối 8, khối 9 là $x, y$: $x + y = 1500$.",
+        "Thực tế: $1{,}1x + 1{,}25y = 1770$.",
+        "Thế $x = 1500 - y$: $1650 - 1{,}1y + 1{,}25y = 1770 \\Rightarrow 0{,}15y = 120 \\Rightarrow y = 800$.",
+        "Khối 9 đăng kí $800$ kg (khối 8: $700$ kg)."
+      ]
+    },
+    {
+      "id": "c1q29", "topic": "c1t3", "difficulty": "tb", "type": "tf", "aiGenerated": true,
+      "prompt": "Hai người cùng làm một công việc thì sau $16$ giờ xong. Khi đó, mỗi giờ cả hai người làm được $\\dfrac{1}{16}$ công việc.",
+      "answer": true,
+      "solution": [
+        "Làm xong toàn bộ công việc trong $16$ giờ thì mỗi giờ làm được $\\dfrac{1}{16}$ công việc. Khẳng định **đúng**."
+      ]
+    },
+    {
+      "id": "c1q30", "topic": "c1t3", "difficulty": "kho", "type": "number", "aiGenerated": true,
+      "source": "Đề cương HK1 (bài hai người làm chung 16 giờ)",
+      "prompt": "Hai người cùng làm chung một công việc trong $16$ giờ thì xong. Nếu người thứ nhất làm $3$ giờ và người thứ hai làm $6$ giờ thì được $25\\%$ công việc. Người thứ nhất làm một mình thì xong trong bao nhiêu giờ?",
+      "answer": "24",
+      "solution": [
+        "Gọi thời gian làm một mình của người I, II là $x, y$ (giờ), $x, y > 16$. Đặt $u = \\dfrac{1}{x},\\ v = \\dfrac{1}{y}$.",
+        "$\\begin{cases} u + v = \\frac{1}{16} \\\\ 3u + 6v = \\frac{1}{4} \\end{cases}$.",
+        "Nhân PT1 với $3$ rồi trừ: $3v = \\dfrac{1}{4} - \\dfrac{3}{16} = \\dfrac{1}{16} \\Rightarrow v = \\dfrac{1}{48}$.",
+        "$u = \\dfrac{1}{16} - \\dfrac{1}{48} = \\dfrac{1}{24}$. Vậy người I làm một mình xong trong $24$ giờ (người II: $48$ giờ)."
+      ]
+    },
+    {
+      "id": "c1q31", "topic": "c1t3", "difficulty": "kho", "type": "number", "aiGenerated": true,
+      "source": "Đề cương HK1 (bài ca nô xuôi 12 km, ngược 12 km)",
+      "prompt": "Một ca nô xuôi dòng $12$ km rồi ngược dòng $12$ km mất $2$ giờ $30$ phút. Cũng trên khúc sông ấy, ca nô xuôi $4$ km rồi ngược $8$ km mất $1$ giờ $20$ phút. Tính vận tốc riêng của ca nô (km/h).",
+      "answer": "10",
+      "solution": [
+        "Gọi vận tốc xuôi, ngược là $a, b$ (km/h). Đặt $p = \\dfrac{1}{a},\\ q = \\dfrac{1}{b}$.",
+        "$12p + 12q = \\dfrac{5}{2} \\Rightarrow p + q = \\dfrac{5}{24}$; $\\ 4p + 8q = \\dfrac{4}{3} \\Rightarrow p + 2q = \\dfrac{1}{3}$.",
+        "Trừ: $q = \\dfrac{1}{3} - \\dfrac{5}{24} = \\dfrac{1}{8} \\Rightarrow b = 8$; $\\ p = \\dfrac{1}{12} \\Rightarrow a = 12$.",
+        "Vận tốc riêng $= \\dfrac{a + b}{2} = \\dfrac{12 + 8}{2} = 10$ km/h (vận tốc dòng nước $2$ km/h)."
+      ]
+    },
+    {
+      "id": "c1q32", "topic": "c1t3", "difficulty": "kho", "type": "mcq", "aiGenerated": true,
+      "prompt": "Một số có hai chữ số có tổng các chữ số bằng $11$. Nếu đổi chỗ hai chữ số thì được số mới lớn hơn số ban đầu $27$ đơn vị. Số ban đầu là",
+      "options": ["$47$", "$74$", "$38$", "$56$"],
+      "answer": 0,
+      "solution": [
+        "Gọi số cần tìm là $\\overline{ab} = 10a + b$ ($1 \\le a \\le 9$, $0 \\le b \\le 9$): $a + b = 11$.",
+        "$(10b + a) - (10a + b) = 27 \\Rightarrow 9(b - a) = 27 \\Rightarrow b - a = 3$.",
+        "Giải: $b = 7,\\ a = 4$. Số ban đầu là $47$ (thử: $74 - 47 = 27$ ✓)."
+      ]
+    },
+    {
+      "id": "c1q33", "topic": "c1t3", "difficulty": "kho", "type": "tf", "aiGenerated": true,
+      "prompt": "Hai xí nghiệp theo kế hoạch phải làm $300$ sản phẩm. Thực tế xí nghiệp I vượt mức $15\\%$, xí nghiệp II vượt mức $10\\%$ nên cả hai làm được $336$ sản phẩm. Khi đó, theo kế hoạch xí nghiệp II phải làm $180$ sản phẩm.",
+      "answer": true,
+      "solution": [
+        "Gọi kế hoạch của xí nghiệp I, II là $x, y$: $x + y = 300$ và $1{,}15x + 1{,}1y = 336$.",
+        "Thế $y = 300 - x$: $1{,}15x + 330 - 1{,}1x = 336 \\Rightarrow 0{,}05x = 6 \\Rightarrow x = 120$.",
+        "$y = 180$. Khẳng định **đúng**."
+      ]
+    }
+  ]
+}

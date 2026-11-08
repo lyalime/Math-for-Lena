@@ -1,0 +1,300 @@
+{
+  "id": 2,
+  "title": "Phương trình và bất phương trình bậc nhất một ẩn",
+  "short": "PT & BPT một ẩn",
+  "doodle": "balance",
+  "status": "ready",
+  "topics": [
+    {
+      "id": "c2t1",
+      "title": "Phương trình quy về phương trình bậc nhất một ẩn",
+      "aiGenerated": true,
+      "summary": "Đưa phương trình về dạng tích $A \\cdot B = 0$, hoặc khử mẫu sau khi đặt điều kiện xác định, để quy về phương trình bậc nhất $ax + b = 0$.",
+      "points": [
+        "Phương trình bậc nhất một ẩn $ax + b = 0$ $(a \\neq 0)$ có nghiệm duy nhất $x = -\\dfrac{b}{a}$.",
+        "**Phương trình tích:** $A(x) \\cdot B(x) = 0 \\Leftrightarrow A(x) = 0$ hoặc $B(x) = 0$.",
+        "Muốn đưa về phương trình tích: chuyển mọi hạng tử sang một vế rồi phân tích thành nhân tử (đặt nhân tử chung, hằng đẳng thức, nhóm hạng tử).",
+        "**Phương trình chứa ẩn ở mẫu:** (1) tìm điều kiện xác định (mọi mẫu khác $0$); (2) quy đồng rồi khử mẫu; (3) giải phương trình vừa nhận được; (4) đối chiếu điều kiện, loại giá trị không thoả mãn rồi kết luận."
+      ],
+      "formulas": [
+        { "id": "c2t1f1", "front": "Nghiệm của $ax + b = 0$ $(a \\neq 0)$", "back": "$x = -\\dfrac{b}{a}$" },
+        { "id": "c2t1f2", "front": "Phương trình tích $A \\cdot B = 0$", "back": "$\\Leftrightarrow A = 0$ hoặc $B = 0$" },
+        { "id": "c2t1f3", "front": "Hằng đẳng thức hiệu hai bình phương", "back": "$A^2 - B^2 = (A - B)(A + B)$" },
+        { "id": "c2t1f4", "front": "Điều kiện xác định của phương trình chứa ẩn ở mẫu", "back": "Tất cả các mẫu phải khác $0$" },
+        { "id": "c2t1f5", "front": "4 bước giải phương trình chứa ẩn ở mẫu", "back": "Tìm ĐKXĐ → quy đồng, khử mẫu → giải → đối chiếu ĐKXĐ, kết luận" }
+      ],
+      "example": {
+        "problem": "Giải phương trình $(2x - 1)^2 - (x + 3)^2 = 0$.",
+        "steps": [
+          "Dùng hằng đẳng thức $A^2 - B^2 = (A - B)(A + B)$.",
+          "$\\big[(2x - 1) - (x + 3)\\big]\\big[(2x - 1) + (x + 3)\\big] = 0 \\Leftrightarrow (x - 4)(3x + 2) = 0$.",
+          "$x - 4 = 0 \\Rightarrow x = 4$; $\\ 3x + 2 = 0 \\Rightarrow x = -\\dfrac{2}{3}$.",
+          "Vậy phương trình có hai nghiệm $x = 4$ và $x = -\\dfrac{2}{3}$."
+        ],
+        "source": "Phỏng theo đề cương HK1 (dạng giải phương trình bằng cách đưa về phương trình tích)"
+      }
+    },
+    {
+      "id": "c2t2",
+      "title": "Bất đẳng thức và tính chất",
+      "aiGenerated": true,
+      "summary": "Cộng cùng một số vào hai vế thì giữ chiều; nhân với số dương giữ chiều, nhân với số âm thì đổi chiều bất đẳng thức.",
+      "points": [
+        "Các hệ thức $a > b$, $a < b$, $a \\ge b$, $a \\le b$ gọi là bất đẳng thức; $a$ là vế trái, $b$ là vế phải.",
+        "**Bắc cầu:** $a > b$ và $b > c$ thì $a > c$.",
+        "**Cộng:** $a > b \\Rightarrow a + c > b + c$ với mọi $c$.",
+        "**Nhân:** nếu $a > b$ thì $ac > bc$ khi $c > 0$, còn $ac < bc$ khi $c < 0$ (**đổi chiều**).",
+        "Với mọi số thực: $a^2 \\ge 0$; từ $(a - b)^2 \\ge 0$ suy ra $a^2 + b^2 \\ge 2ab$, dấu \"=\" khi $a = b$."
+      ],
+      "formulas": [
+        { "id": "c2t2f1", "front": "$a > b$ thì $a + c$ ? $b + c$", "back": "$a + c > b + c$ (giữ chiều)" },
+        { "id": "c2t2f2", "front": "$a > b$ và $c > 0$ thì", "back": "$ac > bc$ (giữ chiều)" },
+        { "id": "c2t2f3", "front": "$a > b$ và $c < 0$ thì", "back": "$ac < bc$ (**đổi chiều**)" },
+        { "id": "c2t2f4", "front": "Tính chất bắc cầu", "back": "$a > b,\\ b > c \\Rightarrow a > c$" },
+        { "id": "c2t2f5", "front": "Bất đẳng thức suy ra từ $(a - b)^2 \\ge 0$", "back": "$a^2 + b^2 \\ge 2ab$, dấu \"=\" khi $a = b$" },
+        { "id": "c2t2f6", "front": "\"$x$ không nhỏ hơn $3$\" viết là", "back": "$x \\ge 3$" }
+      ],
+      "example": {
+        "problem": "Cho $a > b$. So sánh $-3a + 1$ và $-3b + 1$.",
+        "steps": [
+          "Nhân hai vế của $a > b$ với $-3 < 0$ thì bất đẳng thức đổi chiều: $-3a < -3b$.",
+          "Cộng $1$ vào hai vế (giữ chiều): $-3a + 1 < -3b + 1$."
+        ]
+      }
+    },
+    {
+      "id": "c2t3",
+      "title": "Bất phương trình bậc nhất một ẩn",
+      "aiGenerated": true,
+      "summary": "Giải $ax + b > 0$ bằng quy tắc chuyển vế và quy tắc nhân; khi chia hai vế cho số âm phải đổi chiều.",
+      "points": [
+        "Bất phương trình bậc nhất một ẩn có dạng $ax + b > 0$ (hoặc $<, \\ge, \\le$) với $a \\neq 0$.",
+        "**Chuyển vế:** chuyển một hạng tử sang vế kia và đổi dấu hạng tử đó.",
+        "**Nhân (chia):** nhân hoặc chia hai vế cho số dương thì giữ chiều, cho số âm thì **đổi chiều**.",
+        "$ax + b > 0$: nếu $a > 0$ thì $x > -\\dfrac{b}{a}$; nếu $a < 0$ thì $x < -\\dfrac{b}{a}$.",
+        "Bài toán thực tế: \"không quá\", \"tối đa\" ứng với $\\le$; \"ít nhất\", \"tối thiểu\" ứng với $\\ge$."
+      ],
+      "formulas": [
+        { "id": "c2t3f1", "front": "Dạng bất phương trình bậc nhất một ẩn", "back": "$ax + b > 0$ (hoặc $<, \\ge, \\le$), $a \\neq 0$" },
+        { "id": "c2t3f2", "front": "Quy tắc chuyển vế", "back": "Chuyển hạng tử sang vế kia thì **đổi dấu** hạng tử đó" },
+        { "id": "c2t3f3", "front": "Chia hai vế cho số âm", "back": "Phải **đổi chiều** bất phương trình" },
+        { "id": "c2t3f4", "front": "Nghiệm của $ax + b > 0$ khi $a > 0$", "back": "$x > -\\dfrac{b}{a}$" },
+        { "id": "c2t3f5", "front": "Nghiệm của $ax + b > 0$ khi $a < 0$", "back": "$x < -\\dfrac{b}{a}$" },
+        { "id": "c2t3f6", "front": "\"Không quá\" và \"ít nhất\" ứng với dấu nào?", "back": "Không quá: $\\le$. Ít nhất: $\\ge$" }
+      ],
+      "example": {
+        "problem": "Giải bất phương trình $\\dfrac{x - 2}{3} < \\dfrac{x + 1}{2}$.",
+        "steps": [
+          "Nhân hai vế với $6 > 0$ (giữ chiều): $2(x - 2) < 3(x + 1)$.",
+          "$2x - 4 < 3x + 3 \\Leftrightarrow 2x - 3x < 3 + 4 \\Leftrightarrow -x < 7$.",
+          "Nhân hai vế với $-1$ (đổi chiều): $x > -7$.",
+          "Vậy nghiệm của bất phương trình là $x > -7$."
+        ]
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "c2q01", "topic": "c2t1", "difficulty": "de", "type": "mcq", "aiGenerated": true,
+      "prompt": "Nghiệm của phương trình $(x - 2)(x + 5) = 0$ là",
+      "options": ["$x = 2;\\ x = -5$", "$x = -2;\\ x = 5$", "$x = 2;\\ x = 5$", "$x = -2;\\ x = -5$"],
+      "answer": 0,
+      "solution": ["$(x - 2)(x + 5) = 0 \\Leftrightarrow x - 2 = 0$ hoặc $x + 5 = 0$.", "$x = 2$ hoặc $x = -5$."]
+    },
+    {
+      "id": "c2q02", "topic": "c2t1", "difficulty": "de", "type": "tf", "aiGenerated": true,
+      "prompt": "Điều kiện xác định của phương trình $\\dfrac{x + 1}{x - 3} = 2$ là $x \\neq 3$.",
+      "answer": true,
+      "solution": ["Mẫu $x - 3 \\neq 0 \\Leftrightarrow x \\neq 3$. Khẳng định **đúng**."]
+    },
+    {
+      "id": "c2q03", "topic": "c2t1", "difficulty": "de", "type": "number", "aiGenerated": true,
+      "prompt": "Giải phương trình $3x - 6 = 0$. Tìm $x$.",
+      "answer": "2",
+      "solution": ["$3x = 6$.", "$x = 2$."]
+    },
+    {
+      "id": "c2q04", "topic": "c2t1", "difficulty": "tb", "type": "mcq", "aiGenerated": true,
+      "prompt": "Đưa phương trình $x^2 - 4x = 0$ về phương trình tích, ta được",
+      "options": ["$x(x - 4) = 0$", "$x(x + 4) = 0$", "$(x - 2)(x + 2) = 0$", "$(x - 4)^2 = 0$"],
+      "answer": 0,
+      "solution": ["Đặt nhân tử chung $x$: $x^2 - 4x = x(x - 4)$.", "Phương trình tương đương $x(x - 4) = 0$."]
+    },
+    {
+      "id": "c2q05", "topic": "c2t1", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "prompt": "Tính tổng các nghiệm của phương trình $(2x - 1)(x + 3) = 0$.",
+      "answer": "-2,5", "accept": ["-5/2"],
+      "solution": ["$2x - 1 = 0 \\Rightarrow x = \\dfrac{1}{2}$; $\\ x + 3 = 0 \\Rightarrow x = -3$.", "Tổng: $\\dfrac{1}{2} + (-3) = -\\dfrac{5}{2} = -2{,}5$."]
+    },
+    {
+      "id": "c2q06", "topic": "c2t1", "difficulty": "tb", "type": "tf", "aiGenerated": true,
+      "prompt": "Phương trình $\\dfrac{2x}{x - 1} = \\dfrac{2}{x - 1}$ có nghiệm $x = 1$.",
+      "answer": false,
+      "solution": ["ĐKXĐ: $x \\neq 1$.", "Khử mẫu: $2x = 2 \\Rightarrow x = 1$, nhưng giá trị này không thoả ĐKXĐ nên bị loại.", "Phương trình vô nghiệm. Khẳng định **sai**."]
+    },
+    {
+      "id": "c2q07", "topic": "c2t1", "difficulty": "kho", "type": "number", "aiGenerated": true,
+      "prompt": "Giải phương trình $\\dfrac{x + 3}{x - 2} = \\dfrac{x - 1}{x + 1}$. Viết nghiệm dưới dạng phân số $a/b$.",
+      "answer": "-1/7",
+      "solution": [
+        "ĐKXĐ: $x \\neq 2$ và $x \\neq -1$.",
+        "Khử mẫu: $(x + 3)(x + 1) = (x - 1)(x - 2) \\Leftrightarrow x^2 + 4x + 3 = x^2 - 3x + 2$.",
+        "$7x = -1 \\Rightarrow x = -\\dfrac{1}{7}$ (thoả ĐKXĐ)."
+      ]
+    },
+    {
+      "id": "c2q08", "topic": "c2t1", "difficulty": "kho", "type": "mcq", "aiGenerated": true,
+      "prompt": "Số nghiệm của phương trình $x^3 - 4x = 0$ là",
+      "options": ["$1$", "$2$", "$3$", "$0$"],
+      "answer": 2,
+      "solution": ["$x^3 - 4x = x(x^2 - 4) = x(x - 2)(x + 2)$.", "Phương trình có $3$ nghiệm: $x = 0,\\ x = 2,\\ x = -2$."]
+    },
+    {
+      "id": "c2q09", "topic": "c2t1", "difficulty": "kho", "type": "number", "aiGenerated": true,
+      "source": "Phỏng theo đề cương HK1 (bài giải phương trình $(x-3)^2 = (2x+7)^2$)",
+      "prompt": "Tính tổng các nghiệm của phương trình $(x + 1)^2 = (2x - 1)^2$.",
+      "answer": "2",
+      "solution": [
+        "Chuyển vế: $(x + 1)^2 - (2x - 1)^2 = 0$.",
+        "$\\big[(x + 1) - (2x - 1)\\big]\\big[(x + 1) + (2x - 1)\\big] = 0 \\Leftrightarrow (2 - x) \\cdot 3x = 0$.",
+        "Nghiệm $x = 2$ và $x = 0$. Tổng bằng $2$."
+      ]
+    },
+    {
+      "id": "c2q10", "topic": "c2t2", "difficulty": "de", "type": "mcq", "aiGenerated": true,
+      "source": "Đề cương ôn tập (.docx), Câu 6",
+      "prompt": "Bất đẳng thức diễn tả \"$x$ nhỏ hơn hoặc bằng $-2$\" là",
+      "options": ["$x < -2$", "$x \\le -2$", "$x \\ge -2$", "$x > -2$"],
+      "answer": 1,
+      "solution": ["\"Nhỏ hơn hoặc bằng\" dùng dấu $\\le$: $x \\le -2$."]
+    },
+    {
+      "id": "c2q11", "topic": "c2t2", "difficulty": "de", "type": "tf", "aiGenerated": true,
+      "prompt": "Nếu $a > b$ thì $a + 5 > b + 5$.",
+      "answer": true,
+      "solution": ["Cộng cùng một số vào hai vế thì bất đẳng thức giữ chiều. Khẳng định **đúng**."]
+    },
+    {
+      "id": "c2q12", "topic": "c2t2", "difficulty": "de", "type": "mcq", "aiGenerated": true,
+      "prompt": "Cho $a < b$. Khẳng định nào sau đây đúng?",
+      "options": ["$-2a < -2b$", "$-2a > -2b$", "$a - 1 > b - 1$", "$3a > 3b$"],
+      "answer": 1,
+      "solution": ["Nhân hai vế với $-2 < 0$ thì đổi chiều: $-2a > -2b$.", "Các phương án còn lại đều sai chiều."]
+    },
+    {
+      "id": "c2q13", "topic": "c2t2", "difficulty": "tb", "type": "tf", "aiGenerated": true,
+      "prompt": "Nếu $a > b$ thì $-\\dfrac{a}{3} > -\\dfrac{b}{3}$.",
+      "answer": false,
+      "solution": ["Nhân hai vế với $-\\dfrac{1}{3} < 0$ thì đổi chiều: $-\\dfrac{a}{3} < -\\dfrac{b}{3}$. Khẳng định **sai**."]
+    },
+    {
+      "id": "c2q14", "topic": "c2t2", "difficulty": "tb", "type": "mcq", "aiGenerated": true,
+      "prompt": "Với mọi số thực $x$, khẳng định nào sau đây **sai**?",
+      "options": ["$x^2 \\ge 0$", "$(x - 1)^2 \\ge 0$", "$x^2 + 1 > 0$", "$-x^2 > 0$"],
+      "answer": 3,
+      "solution": ["$x^2 \\ge 0$ nên $-x^2 \\le 0$ với mọi $x$.", "Chẳng hạn $x = 0$ thì $-x^2 = 0$, không lớn hơn $0$. Vậy $-x^2 > 0$ là khẳng định sai."]
+    },
+    {
+      "id": "c2q15", "topic": "c2t2", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "prompt": "Cho $a \\ge 3$. Tìm giá trị nhỏ nhất của biểu thức $2a - 1$.",
+      "answer": "5",
+      "solution": ["Nhân với $2 > 0$: $2a \\ge 6$; cộng $-1$: $2a - 1 \\ge 5$.", "Dấu \"=\" khi $a = 3$. Giá trị nhỏ nhất là $5$."]
+    },
+    {
+      "id": "c2q16", "topic": "c2t2", "difficulty": "kho", "type": "mcq", "aiGenerated": true,
+      "prompt": "Cho $a > b > 0$. Khẳng định nào sau đây đúng?",
+      "options": ["$a^2 > b^2$", "$\\dfrac{1}{a} > \\dfrac{1}{b}$", "$-a > -b$", "$a - b < 0$"],
+      "answer": 0,
+      "solution": [
+        "Nhân $a > b$ với $a > 0$: $a^2 > ab$; nhân với $b > 0$: $ab > b^2$. Bắc cầu: $a^2 > b^2$.",
+        "$\\dfrac{1}{a} < \\dfrac{1}{b}$ (vì $a > b > 0$), $-a < -b$, $a - b > 0$ nên ba phương án còn lại sai."
+      ]
+    },
+    {
+      "id": "c2q17", "topic": "c2t2", "difficulty": "kho", "type": "tf", "aiGenerated": true,
+      "prompt": "Với mọi số thực $a, b$ ta có $a^2 + b^2 \\ge 2ab$.",
+      "answer": true,
+      "solution": ["$a^2 + b^2 - 2ab = (a - b)^2 \\ge 0$ với mọi $a, b$. Khẳng định **đúng**."]
+    },
+    {
+      "id": "c2q18", "topic": "c2t2", "difficulty": "kho", "type": "number", "aiGenerated": true,
+      "prompt": "Tìm giá trị nhỏ nhất của biểu thức $A = x^2 - 6x + 10$.",
+      "answer": "1",
+      "solution": ["$A = (x^2 - 6x + 9) + 1 = (x - 3)^2 + 1$.", "Vì $(x - 3)^2 \\ge 0$ nên $A \\ge 1$, dấu \"=\" khi $x = 3$. Giá trị nhỏ nhất là $1$."]
+    },
+    {
+      "id": "c2q19", "topic": "c2t3", "difficulty": "de", "type": "mcq", "aiGenerated": true,
+      "prompt": "Bất phương trình nào sau đây là bất phương trình bậc nhất một ẩn?",
+      "options": ["$2x - 3 > 0$", "$x^2 + 1 > 0$", "$0x + 5 \\le 0$", "$\\dfrac{1}{x} > 2$"],
+      "answer": 0,
+      "solution": ["Dạng $ax + b > 0$ với $a \\neq 0$: chỉ có $2x - 3 > 0$ ($a = 2$).", "$x^2$, $\\dfrac{1}{x}$ không bậc nhất; $0x + 5 \\le 0$ có $a = 0$."]
+    },
+    {
+      "id": "c2q20", "topic": "c2t3", "difficulty": "de", "type": "number", "aiGenerated": true,
+      "prompt": "Nghiệm của bất phương trình $2x - 6 > 0$ có dạng $x > a$. Tìm $a$.",
+      "answer": "3",
+      "solution": ["$2x > 6$.", "Chia cho $2 > 0$ (giữ chiều): $x > 3$. Vậy $a = 3$."]
+    },
+    {
+      "id": "c2q21", "topic": "c2t3", "difficulty": "de", "type": "tf", "aiGenerated": true,
+      "prompt": "$x = 2$ là một nghiệm của bất phương trình $3x - 1 > 4$.",
+      "answer": true,
+      "solution": ["Thay $x = 2$: $3 \\cdot 2 - 1 = 5 > 4$ đúng. Khẳng định **đúng**."]
+    },
+    {
+      "id": "c2q22", "topic": "c2t3", "difficulty": "tb", "type": "mcq", "aiGenerated": true,
+      "prompt": "Nghiệm của bất phương trình $-3x + 6 \\ge 0$ là",
+      "options": ["$x \\le 2$", "$x \\ge 2$", "$x \\le -2$", "$x \\ge -2$"],
+      "answer": 0,
+      "solution": ["$-3x \\ge -6$.", "Chia cho $-3 < 0$ (đổi chiều): $x \\le 2$."]
+    },
+    {
+      "id": "c2q23", "topic": "c2t3", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "prompt": "Tìm số nguyên lớn nhất thoả mãn bất phương trình $5 - 2x > 1$.",
+      "answer": "1",
+      "solution": ["$-2x > -4 \\Rightarrow x < 2$ (chia cho $-2$, đổi chiều).", "Số nguyên lớn nhất nhỏ hơn $2$ là $1$."]
+    },
+    {
+      "id": "c2q24", "topic": "c2t3", "difficulty": "tb", "type": "tf", "aiGenerated": true,
+      "prompt": "Bất phương trình $\\dfrac{x + 1}{2} \\le \\dfrac{x}{3} + 1$ có nghiệm là $x \\le 3$.",
+      "answer": true,
+      "solution": ["Nhân hai vế với $6 > 0$: $3(x + 1) \\le 2x + 6$.", "$3x + 3 \\le 2x + 6 \\Leftrightarrow x \\le 3$. Khẳng định **đúng**."]
+    },
+    {
+      "id": "c2q25", "topic": "c2t3", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "source": "Bộ đề ôn theo chương (Chương 2, Đề 5 – tự luận)",
+      "prompt": "Lớp 9A có kế hoạch trồng ít nhất $100$ cây xanh và đã trồng được $54$ cây. Lớp cần trồng thêm ít nhất bao nhiêu cây nữa?",
+      "answer": "46",
+      "solution": ["Gọi số cây cần trồng thêm là $x$: $54 + x \\ge 100$.", "$x \\ge 46$. Cần trồng thêm ít nhất $46$ cây."]
+    },
+    {
+      "id": "c2q26", "topic": "c2t3", "difficulty": "kho", "type": "number", "aiGenerated": true,
+      "source": "Bộ đề ôn theo chương (Chương 2, Đề 5 – tự luận)",
+      "prompt": "Một người có số tiền không quá $70\\,000$ đồng, gồm $15$ tờ tiền loại $2\\,000$ đồng và $5\\,000$ đồng. Người đó có nhiều nhất bao nhiêu tờ $5\\,000$ đồng?",
+      "answer": "13",
+      "solution": [
+        "Gọi số tờ $5\\,000$ đồng là $x$ ($x \\in \\mathbb{N},\\ x \\le 15$), số tờ $2\\,000$ đồng là $15 - x$.",
+        "$5000x + 2000(15 - x) \\le 70000 \\Leftrightarrow 3000x \\le 40000 \\Leftrightarrow x \\le 13{,}33\\ldots$",
+        "$x$ là số tự nhiên nên nhiều nhất $13$ tờ."
+      ]
+    },
+    {
+      "id": "c2q27", "topic": "c2t3", "difficulty": "kho", "type": "mcq", "aiGenerated": true,
+      "prompt": "Với giá trị nào của $m$ thì $(m - 2)x + 3 > 0$ là bất phương trình bậc nhất một ẩn?",
+      "options": ["$m \\neq 2$", "$m = 2$", "$m > 2$", "$m < 2$"],
+      "answer": 0,
+      "solution": ["Cần hệ số của $x$ khác $0$: $m - 2 \\neq 0 \\Leftrightarrow m \\neq 2$."]
+    },
+    {
+      "id": "c2q28", "topic": "c2t3", "difficulty": "kho", "type": "number", "aiGenerated": true,
+      "source": "Đề cương HK1 – THCS Huỳnh Thúc Kháng, Bài 5",
+      "prompt": "Bác An rào một mảnh vườn hình chữ nhật có chiều dài $x$ (m), chiều rộng ngắn hơn chiều dài $10$ m. Bác có $90$ m lưới. Chiều dài lớn nhất (m) để bác đủ lưới rào quanh vườn là bao nhiêu?",
+      "answer": "27,5",
+      "solution": [
+        "Chu vi vườn: $2\\big(x + (x - 10)\\big) = 4x - 20$ (m).",
+        "Đủ lưới khi $4x - 20 \\le 90 \\Leftrightarrow 4x \\le 110 \\Leftrightarrow x \\le 27{,}5$.",
+        "Chiều dài lớn nhất là $27{,}5$ m."
+      ]
+    }
+  ]
+}

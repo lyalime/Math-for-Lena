@@ -1,0 +1,464 @@
+{
+  "id": 3,
+  "title": "Căn bậc hai và căn bậc ba",
+  "short": "Căn bậc hai, bậc ba",
+  "doodle": "root",
+  "status": "ready",
+  "topics": [
+    {
+      "id": "c3t1",
+      "title": "Căn bậc hai và căn thức bậc hai",
+      "aiGenerated": true,
+      "summary": "Mỗi số dương có hai căn bậc hai đối nhau; $\\sqrt{A}$ chỉ xác định khi $A \\ge 0$ và luôn có $\\sqrt{A^2} = |A|$.",
+      "points": [
+        "Căn bậc hai của số $a \\ge 0$ là số $x$ sao cho $x^2 = a$. Số $a > 0$ có hai căn bậc hai là $\\sqrt{a}$ và $-\\sqrt{a}$; số $0$ có một căn bậc hai là $0$; **số âm không có căn bậc hai**.",
+        "Căn bậc hai số học: $\\sqrt{a} = x \\Leftrightarrow x \\ge 0$ và $x^2 = a$.",
+        "Căn thức $\\sqrt{A}$ xác định (có nghĩa) khi và chỉ khi $A \\ge 0$.",
+        "Hằng đẳng thức: $\\sqrt{A^2} = |A|$, tức là bằng $A$ nếu $A \\ge 0$ và bằng $-A$ nếu $A < 0$.",
+        "So sánh: với $0 \\le a < b$ thì $\\sqrt{a} < \\sqrt{b}$."
+      ],
+      "formulas": [
+        { "id": "c3t1f1", "front": "Căn bậc hai số học: $\\sqrt{a} = x$ khi nào?", "back": "$x \\ge 0$ và $x^2 = a$ (với $a \\ge 0$)" },
+        { "id": "c3t1f2", "front": "Số $a > 0$ có mấy căn bậc hai?", "back": "Hai: $\\sqrt{a}$ và $-\\sqrt{a}$. Số âm không có căn bậc hai" },
+        { "id": "c3t1f3", "front": "$\\sqrt{A}$ xác định khi", "back": "$A \\ge 0$" },
+        { "id": "c3t1f4", "front": "$\\sqrt{A^2} = ?$", "back": "$|A|$" },
+        { "id": "c3t1f5", "front": "So sánh căn bậc hai", "back": "$0 \\le a < b \\Leftrightarrow \\sqrt{a} < \\sqrt{b}$" }
+      ],
+      "example": {
+        "problem": "Rút gọn $\\sqrt{(2 - \\sqrt{5})^2}$.",
+        "steps": [
+          "Áp dụng $\\sqrt{A^2} = |A|$: $\\sqrt{(2 - \\sqrt{5})^2} = |2 - \\sqrt{5}|$.",
+          "Vì $4 < 5$ nên $2 = \\sqrt{4} < \\sqrt{5}$, do đó $2 - \\sqrt{5} < 0$.",
+          "Vậy $|2 - \\sqrt{5}| = \\sqrt{5} - 2$."
+        ]
+      }
+    },
+    {
+      "id": "c3t2",
+      "title": "Khai phương một tích, một thương",
+      "aiGenerated": true,
+      "summary": "Căn của một tích bằng tích các căn, căn của một thương bằng thương các căn (với điều kiện các biểu thức không âm, mẫu dương).",
+      "points": [
+        "Với $A \\ge 0,\\ B \\ge 0$: $\\sqrt{A \\cdot B} = \\sqrt{A} \\cdot \\sqrt{B}$.",
+        "Với $A \\ge 0,\\ B > 0$: $\\sqrt{\\dfrac{A}{B}} = \\dfrac{\\sqrt{A}}{\\sqrt{B}}$.",
+        "Dùng theo chiều ngược lại để **nhân, chia hai căn**: $\\sqrt{A} \\cdot \\sqrt{B} = \\sqrt{AB}$, $\\dfrac{\\sqrt{A}}{\\sqrt{B}} = \\sqrt{\\dfrac{A}{B}}$.",
+        "**Lưu ý:** $\\sqrt{A + B} \\neq \\sqrt{A} + \\sqrt{B}$ nói chung."
+      ],
+      "formulas": [
+        { "id": "c3t2f1", "front": "Khai phương một tích", "back": "$\\sqrt{AB} = \\sqrt{A} \\cdot \\sqrt{B}$ $(A, B \\ge 0)$" },
+        { "id": "c3t2f2", "front": "Khai phương một thương", "back": "$\\sqrt{\\dfrac{A}{B}} = \\dfrac{\\sqrt{A}}{\\sqrt{B}}$ $(A \\ge 0,\\ B > 0)$" },
+        { "id": "c3t2f3", "front": "Nhân hai căn thức", "back": "$\\sqrt{A} \\cdot \\sqrt{B} = \\sqrt{AB}$" },
+        { "id": "c3t2f4", "front": "$\\sqrt{A + B}$ có bằng $\\sqrt{A} + \\sqrt{B}$ không?", "back": "Không (vd: $\\sqrt{9 + 16} = 5 \\neq 3 + 4$)" }
+      ],
+      "example": {
+        "problem": "Tính $\\sqrt{12} \\cdot \\sqrt{3}$ và $\\dfrac{\\sqrt{50}}{\\sqrt{2}}$.",
+        "steps": [
+          "$\\sqrt{12} \\cdot \\sqrt{3} = \\sqrt{12 \\cdot 3} = \\sqrt{36} = 6$.",
+          "$\\dfrac{\\sqrt{50}}{\\sqrt{2}} = \\sqrt{\\dfrac{50}{2}} = \\sqrt{25} = 5$."
+        ]
+      }
+    },
+    {
+      "id": "c3t3",
+      "title": "Biến đổi đơn giản biểu thức chứa căn",
+      "aiGenerated": true,
+      "summary": "Đưa thừa số ra ngoài hoặc vào trong dấu căn, khử mẫu và trục căn thức ở mẫu để rút gọn hoặc so sánh.",
+      "points": [
+        "**Đưa thừa số ra ngoài:** $\\sqrt{A^2 B} = |A|\\sqrt{B}$ $(B \\ge 0)$.",
+        "**Đưa thừa số vào trong:** $A\\sqrt{B} = \\sqrt{A^2 B}$ nếu $A \\ge 0$; $\\ A\\sqrt{B} = -\\sqrt{A^2 B}$ nếu $A < 0$.",
+        "**Khử mẫu:** $\\sqrt{\\dfrac{A}{B}} = \\dfrac{\\sqrt{AB}}{|B|}$ $(AB \\ge 0,\\ B \\neq 0)$.",
+        "**Trục căn thức ở mẫu:** $\\dfrac{A}{\\sqrt{B}} = \\dfrac{A\\sqrt{B}}{B}$; $\\ \\dfrac{C}{\\sqrt{A} \\pm \\sqrt{B}} = \\dfrac{C(\\sqrt{A} \\mp \\sqrt{B})}{A - B}$ (nhân với biểu thức liên hợp).",
+        "Muốn so sánh $a\\sqrt{b}$ với $c\\sqrt{d}$: đưa hết thừa số vào trong căn rồi so sánh hai số dưới dấu căn."
+      ],
+      "formulas": [
+        { "id": "c3t3f1", "front": "Đưa thừa số ra ngoài dấu căn", "back": "$\\sqrt{A^2 B} = |A|\\sqrt{B}$" },
+        { "id": "c3t3f2", "front": "Đưa thừa số $A \\ge 0$ vào trong dấu căn", "back": "$A\\sqrt{B} = \\sqrt{A^2 B}$" },
+        { "id": "c3t3f3", "front": "Đưa thừa số $A < 0$ vào trong dấu căn", "back": "$A\\sqrt{B} = -\\sqrt{A^2 B}$" },
+        { "id": "c3t3f4", "front": "Trục căn: $\\dfrac{A}{\\sqrt{B}}$", "back": "$\\dfrac{A\\sqrt{B}}{B}$" },
+        { "id": "c3t3f5", "front": "Trục căn: $\\dfrac{C}{\\sqrt{A} - \\sqrt{B}}$", "back": "$\\dfrac{C(\\sqrt{A} + \\sqrt{B})}{A - B}$" }
+      ],
+      "example": {
+        "problem": "Trục căn thức ở mẫu: $\\dfrac{2}{\\sqrt{3} - 1}$.",
+        "steps": [
+          "Nhân cả tử và mẫu với biểu thức liên hợp $\\sqrt{3} + 1$.",
+          "$\\dfrac{2(\\sqrt{3} + 1)}{(\\sqrt{3} - 1)(\\sqrt{3} + 1)} = \\dfrac{2(\\sqrt{3} + 1)}{3 - 1}$.",
+          "$= \\sqrt{3} + 1$."
+        ]
+      }
+    },
+    {
+      "id": "c3t4",
+      "title": "Căn bậc ba",
+      "aiGenerated": true,
+      "summary": "Mọi số thực đều có đúng một căn bậc ba; $\\sqrt[3]{a^3} = a$ và căn bậc ba giữ nguyên thứ tự.",
+      "points": [
+        "Căn bậc ba của số $a$ là số $x$ sao cho $x^3 = a$, kí hiệu $\\sqrt[3]{a}$.",
+        "**Mọi số thực** (kể cả số âm) đều có duy nhất một căn bậc ba. Ví dụ $\\sqrt[3]{-8} = -2$.",
+        "$\\left(\\sqrt[3]{a}\\right)^3 = \\sqrt[3]{a^3} = a$.",
+        "$a < b \\Leftrightarrow \\sqrt[3]{a} < \\sqrt[3]{b}$.",
+        "$\\sqrt[3]{ab} = \\sqrt[3]{a} \\cdot \\sqrt[3]{b}$; $\\ \\sqrt[3]{\\dfrac{a}{b}} = \\dfrac{\\sqrt[3]{a}}{\\sqrt[3]{b}}$ $(b \\neq 0)$. Biểu thức $\\sqrt[3]{A}$ xác định với mọi giá trị của $A$."
+      ],
+      "formulas": [
+        { "id": "c3t4f1", "front": "Định nghĩa $\\sqrt[3]{a}$", "back": "Số $x$ sao cho $x^3 = a$" },
+        { "id": "c3t4f2", "front": "Số âm có căn bậc ba không?", "back": "Có, duy nhất một. Vd $\\sqrt[3]{-27} = -3$" },
+        { "id": "c3t4f3", "front": "$\\sqrt[3]{a^3} = ?$", "back": "$a$ (với mọi $a$)" },
+        { "id": "c3t4f4", "front": "Căn bậc ba của một tích", "back": "$\\sqrt[3]{ab} = \\sqrt[3]{a} \\cdot \\sqrt[3]{b}$" }
+      ],
+      "example": {
+        "problem": "Tính $\\sqrt[3]{27} - \\sqrt[3]{-8} + \\sqrt[3]{125}$.",
+        "steps": [
+          "$\\sqrt[3]{27} = 3$ vì $3^3 = 27$; $\\ \\sqrt[3]{-8} = -2$ vì $(-2)^3 = -8$; $\\ \\sqrt[3]{125} = 5$.",
+          "Biểu thức bằng $3 - (-2) + 5 = 10$."
+        ]
+      }
+    },
+    {
+      "id": "c3t5",
+      "title": "Rút gọn biểu thức chứa căn",
+      "aiGenerated": true,
+      "summary": "Tìm điều kiện xác định, phân tích thành nhân tử theo $\\sqrt{x}$, quy đồng và rút gọn; sau đó giải các câu hỏi phụ (tính giá trị, tìm $x$, giá trị nguyên).",
+      "points": [
+        "**Điều kiện xác định:** biểu thức dưới căn bậc hai $\\ge 0$, mọi mẫu $\\neq 0$ (thường gặp: $x \\ge 0$, $x \\neq 1$...).",
+        "Hằng đẳng thức theo $\\sqrt{x}$ ($x \\ge 0$): $x - 1 = (\\sqrt{x} - 1)(\\sqrt{x} + 1)$; $\\ x - 2\\sqrt{x} + 1 = (\\sqrt{x} - 1)^2$; $\\ x\\sqrt{x} - 1 = (\\sqrt{x} - 1)(x + \\sqrt{x} + 1)$.",
+        "Quy đồng về mẫu chung, cộng trừ tử, phân tích rồi rút gọn nhân tử chung.",
+        "**Tính giá trị** tại $x = a$: kiểm tra ĐKXĐ trước, rồi thay $\\sqrt{x}$.",
+        "**Tìm $x$ nguyên để $P$ nguyên:** tách $P = m + \\dfrac{k}{\\sqrt{x} + c}$ rồi xét $\\sqrt{x} + c$ là ước của $k$.",
+        "Công thức thực tế chứa căn (vật lí, hình học): thay số rồi tính, chú ý đơn vị và làm tròn."
+      ],
+      "formulas": [
+        { "id": "c3t5f1", "front": "$x - 1$ (với $x \\ge 0$) phân tích thành", "back": "$(\\sqrt{x} - 1)(\\sqrt{x} + 1)$" },
+        { "id": "c3t5f2", "front": "$x - 2\\sqrt{x} + 1$ bằng", "back": "$(\\sqrt{x} - 1)^2$" },
+        { "id": "c3t5f3", "front": "$x\\sqrt{x} - 1$ bằng", "back": "$(\\sqrt{x} - 1)(x + \\sqrt{x} + 1)$" },
+        { "id": "c3t5f4", "front": "ĐKXĐ của $\\dfrac{1}{\\sqrt{x} - 1}$", "back": "$x \\ge 0,\\ x \\neq 1$" },
+        { "id": "c3t5f5", "front": "Mẹo tìm $x$ nguyên để $\\dfrac{\\sqrt{x} + a}{\\sqrt{x} + b}$ nguyên", "back": "Viết $= 1 + \\dfrac{a - b}{\\sqrt{x} + b}$, xét ước của $a - b$" }
+      ],
+      "example": {
+        "problem": "Rút gọn $P = \\dfrac{x - 1}{\\sqrt{x} - 1} + \\dfrac{x - \\sqrt{x}}{\\sqrt{x}}$ với $x > 0,\\ x \\neq 1$, rồi tính $P$ khi $x = 9$.",
+        "steps": [
+          "$\\dfrac{x - 1}{\\sqrt{x} - 1} = \\dfrac{(\\sqrt{x} - 1)(\\sqrt{x} + 1)}{\\sqrt{x} - 1} = \\sqrt{x} + 1$.",
+          "$\\dfrac{x - \\sqrt{x}}{\\sqrt{x}} = \\dfrac{\\sqrt{x}(\\sqrt{x} - 1)}{\\sqrt{x}} = \\sqrt{x} - 1$.",
+          "$P = (\\sqrt{x} + 1) + (\\sqrt{x} - 1) = 2\\sqrt{x}$.",
+          "$x = 9$ thoả ĐKXĐ, $\\sqrt{9} = 3$ nên $P = 6$."
+        ]
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "c3q01", "topic": "c3t1", "difficulty": "de", "type": "mcq", "aiGenerated": true,
+      "source": "Đề cương ôn tập (.docx), Câu 8",
+      "prompt": "Căn bậc hai số học của $9$ là",
+      "options": ["$-3$", "$3$ và $-3$", "$3$", "$81$"],
+      "answer": 2,
+      "solution": ["Căn bậc hai số học là số **không âm** $x$ với $x^2 = 9$.", "$\\sqrt{9} = 3$. ($3$ và $-3$ là hai căn bậc hai của $9$, nhưng căn bậc hai số học chỉ là $3$.)"]
+    },
+    {
+      "id": "c3q02", "topic": "c3t1", "difficulty": "de", "type": "tf", "aiGenerated": true,
+      "prompt": "Số $-16$ có căn bậc hai là $-4$.",
+      "answer": false,
+      "solution": ["Số âm không có căn bậc hai (vì $x^2 \\ge 0$ với mọi $x$).", "$(-4)^2 = 16$, không phải $-16$. Khẳng định **sai**."]
+    },
+    {
+      "id": "c3q03", "topic": "c3t1", "difficulty": "de", "type": "number", "aiGenerated": true,
+      "prompt": "Tính $\\sqrt{49} - \\sqrt{16}$.",
+      "answer": "3",
+      "solution": ["$\\sqrt{49} = 7$, $\\sqrt{16} = 4$.", "$7 - 4 = 3$."]
+    },
+    {
+      "id": "c3q04", "topic": "c3t1", "difficulty": "tb", "type": "mcq", "aiGenerated": true,
+      "prompt": "Biểu thức $\\sqrt{2x - 6}$ xác định khi",
+      "options": ["$x \\ge 3$", "$x > 3$", "$x \\le 3$", "$x \\ge -3$"],
+      "answer": 0,
+      "solution": ["Cần $2x - 6 \\ge 0 \\Leftrightarrow x \\ge 3$."]
+    },
+    {
+      "id": "c3q05", "topic": "c3t1", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "prompt": "Tính $\\sqrt{(3 - \\sqrt{10})^2} - \\sqrt{10}$.",
+      "answer": "-3",
+      "solution": ["$\\sqrt{(3 - \\sqrt{10})^2} = |3 - \\sqrt{10}|$. Vì $3 = \\sqrt{9} < \\sqrt{10}$ nên bằng $\\sqrt{10} - 3$.", "Biểu thức $= \\sqrt{10} - 3 - \\sqrt{10} = -3$."]
+    },
+    {
+      "id": "c3q06", "topic": "c3t1", "difficulty": "tb", "type": "tf", "aiGenerated": true,
+      "prompt": "$\\sqrt{x^2} = x$ với mọi số thực $x$.",
+      "answer": false,
+      "solution": ["$\\sqrt{x^2} = |x|$. Chẳng hạn $x = -2$: $\\sqrt{4} = 2 \\neq -2$. Khẳng định **sai**."]
+    },
+    {
+      "id": "c3q07", "topic": "c3t1", "difficulty": "kho", "type": "mcq", "aiGenerated": true,
+      "prompt": "Với $a < 0$, rút gọn $\\sqrt{a^2} + a$ được",
+      "options": ["$0$", "$2a$", "$-2a$", "$a$"],
+      "answer": 0,
+      "solution": ["$\\sqrt{a^2} = |a| = -a$ vì $a < 0$.", "$-a + a = 0$."]
+    },
+    {
+      "id": "c3q08", "topic": "c3t1", "difficulty": "kho", "type": "number", "aiGenerated": true,
+      "prompt": "Tìm $x$ biết $\\sqrt{x - 1} = 3$.",
+      "answer": "10",
+      "solution": ["ĐK: $x \\ge 1$. Bình phương hai vế: $x - 1 = 9$.", "$x = 10$ (thoả ĐK)."]
+    },
+    {
+      "id": "c3q09", "topic": "c3t1", "difficulty": "kho", "type": "mcq", "aiGenerated": true,
+      "prompt": "Biểu thức $\\dfrac{1}{\\sqrt{x - 2}}$ xác định khi",
+      "options": ["$x > 2$", "$x \\ge 2$", "$x \\neq 2$", "$x < 2$"],
+      "answer": 0,
+      "solution": ["Cần $x - 2 \\ge 0$ để căn có nghĩa và $\\sqrt{x - 2} \\neq 0$ vì nằm ở mẫu.", "Suy ra $x - 2 > 0 \\Leftrightarrow x > 2$."]
+    },
+    {
+      "id": "c3q10", "topic": "c3t1", "difficulty": "kho", "type": "tf", "aiGenerated": true,
+      "prompt": "Phương trình $\\sqrt{(x - 1)^2} = 3$ có hai nghiệm $x = 4$ và $x = -2$.",
+      "answer": true,
+      "solution": ["$\\sqrt{(x - 1)^2} = |x - 1| = 3$.", "$x - 1 = 3 \\Rightarrow x = 4$; $\\ x - 1 = -3 \\Rightarrow x = -2$. Khẳng định **đúng**."]
+    },
+    {
+      "id": "c3q11", "topic": "c3t2", "difficulty": "de", "type": "number", "aiGenerated": true,
+      "prompt": "Tính $\\sqrt{2} \\cdot \\sqrt{8}$.",
+      "answer": "4",
+      "solution": ["$\\sqrt{2} \\cdot \\sqrt{8} = \\sqrt{16} = 4$."]
+    },
+    {
+      "id": "c3q12", "topic": "c3t2", "difficulty": "de", "type": "mcq", "aiGenerated": true,
+      "source": "Đề cương ôn tập (.docx), Câu 10",
+      "prompt": "Với $A \\ge 0,\\ B > 0$, khẳng định nào sau đây đúng?",
+      "options": ["$\\sqrt{\\dfrac{A}{B}} = \\dfrac{\\sqrt{A}}{\\sqrt{B}}$", "$\\sqrt{A + B} = \\sqrt{A} + \\sqrt{B}$", "$\\sqrt{AB} = A\\sqrt{B}$", "$\\sqrt{\\dfrac{A}{B}} = \\dfrac{A}{B}$"],
+      "answer": 0,
+      "solution": ["Quy tắc khai phương một thương: $\\sqrt{\\dfrac{A}{B}} = \\dfrac{\\sqrt{A}}{\\sqrt{B}}$ với $A \\ge 0,\\ B > 0$."]
+    },
+    {
+      "id": "c3q13", "topic": "c3t2", "difficulty": "de", "type": "tf", "aiGenerated": true,
+      "prompt": "$\\sqrt{16 \\cdot 25} = 20$.",
+      "answer": true,
+      "solution": ["$\\sqrt{16 \\cdot 25} = \\sqrt{16} \\cdot \\sqrt{25} = 4 \\cdot 5 = 20$. Khẳng định **đúng**."]
+    },
+    {
+      "id": "c3q14", "topic": "c3t2", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "prompt": "Tính $\\dfrac{\\sqrt{72}}{\\sqrt{2}}$.",
+      "answer": "6",
+      "solution": ["$\\dfrac{\\sqrt{72}}{\\sqrt{2}} = \\sqrt{\\dfrac{72}{2}} = \\sqrt{36} = 6$."]
+    },
+    {
+      "id": "c3q15", "topic": "c3t2", "difficulty": "tb", "type": "mcq", "aiGenerated": true,
+      "prompt": "$\\sqrt{\\dfrac{9}{49}}$ bằng",
+      "options": ["$\\dfrac{3}{7}$", "$\\dfrac{9}{49}$", "$\\dfrac{3}{49}$", "$\\dfrac{9}{7}$"],
+      "answer": 0,
+      "solution": ["$\\sqrt{\\dfrac{9}{49}} = \\dfrac{\\sqrt{9}}{\\sqrt{49}} = \\dfrac{3}{7}$."]
+    },
+    {
+      "id": "c3q16", "topic": "c3t2", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "prompt": "Tính $\\sqrt{0{,}09 \\cdot 400}$.",
+      "answer": "6",
+      "solution": ["$\\sqrt{0{,}09} \\cdot \\sqrt{400} = 0{,}3 \\cdot 20 = 6$."]
+    },
+    {
+      "id": "c3q17", "topic": "c3t2", "difficulty": "kho", "type": "number", "aiGenerated": true,
+      "prompt": "Tính $\\sqrt{13^2 - 12^2}$.",
+      "answer": "5",
+      "solution": ["$13^2 - 12^2 = (13 - 12)(13 + 12) = 25$.", "$\\sqrt{25} = 5$."]
+    },
+    {
+      "id": "c3q18", "topic": "c3t2", "difficulty": "kho", "type": "mcq", "aiGenerated": true,
+      "prompt": "Với $a \\ge 0$, rút gọn $\\sqrt{18a} \\cdot \\sqrt{2a}$ được",
+      "options": ["$6a$", "$36a$", "$6a^2$", "$6\\sqrt{a}$"],
+      "answer": 0,
+      "solution": ["$\\sqrt{18a} \\cdot \\sqrt{2a} = \\sqrt{36a^2} = 6|a|$.", "Vì $a \\ge 0$ nên bằng $6a$."]
+    },
+    {
+      "id": "c3q19", "topic": "c3t2", "difficulty": "kho", "type": "tf", "aiGenerated": true,
+      "prompt": "$\\sqrt{9 + 16} = \\sqrt{9} + \\sqrt{16}$.",
+      "answer": false,
+      "solution": ["$\\sqrt{9 + 16} = \\sqrt{25} = 5$, còn $\\sqrt{9} + \\sqrt{16} = 3 + 4 = 7$.", "Không có quy tắc khai phương một tổng. Khẳng định **sai**."]
+    },
+    {
+      "id": "c3q20", "topic": "c3t3", "difficulty": "de", "type": "mcq", "aiGenerated": true,
+      "prompt": "$\\sqrt{50}$ bằng",
+      "options": ["$5\\sqrt{2}$", "$2\\sqrt{5}$", "$25\\sqrt{2}$", "$10\\sqrt{5}$"],
+      "answer": 0,
+      "solution": ["$\\sqrt{50} = \\sqrt{25 \\cdot 2} = 5\\sqrt{2}$."]
+    },
+    {
+      "id": "c3q21", "topic": "c3t3", "difficulty": "de", "type": "tf", "aiGenerated": true,
+      "prompt": "$3\\sqrt{2} = \\sqrt{18}$.",
+      "answer": true,
+      "solution": ["Đưa $3 > 0$ vào trong căn: $3\\sqrt{2} = \\sqrt{9 \\cdot 2} = \\sqrt{18}$. Khẳng định **đúng**."]
+    },
+    {
+      "id": "c3q22", "topic": "c3t3", "difficulty": "de", "type": "mcq", "aiGenerated": true,
+      "prompt": "Trục căn thức ở mẫu của $\\dfrac{6}{\\sqrt{3}}$ được",
+      "options": ["$2\\sqrt{3}$", "$6\\sqrt{3}$", "$\\dfrac{\\sqrt{3}}{2}$", "$3\\sqrt{2}$"],
+      "answer": 0,
+      "solution": ["$\\dfrac{6}{\\sqrt{3}} = \\dfrac{6\\sqrt{3}}{3} = 2\\sqrt{3}$."]
+    },
+    {
+      "id": "c3q23", "topic": "c3t3", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "prompt": "Tính $\\sqrt{12} + \\sqrt{27} - \\sqrt{75}$.",
+      "answer": "0",
+      "solution": ["$\\sqrt{12} = 2\\sqrt{3}$, $\\sqrt{27} = 3\\sqrt{3}$, $\\sqrt{75} = 5\\sqrt{3}$.", "$2\\sqrt{3} + 3\\sqrt{3} - 5\\sqrt{3} = 0$."]
+    },
+    {
+      "id": "c3q24", "topic": "c3t3", "difficulty": "tb", "type": "mcq", "aiGenerated": true,
+      "prompt": "So sánh $3\\sqrt{5}$ và $5\\sqrt{3}$.",
+      "options": ["$3\\sqrt{5} > 5\\sqrt{3}$", "$3\\sqrt{5} < 5\\sqrt{3}$", "$3\\sqrt{5} = 5\\sqrt{3}$", "Không so sánh được"],
+      "answer": 1,
+      "solution": ["Đưa vào trong căn: $3\\sqrt{5} = \\sqrt{45}$, $5\\sqrt{3} = \\sqrt{75}$.", "$45 < 75$ nên $3\\sqrt{5} < 5\\sqrt{3}$."]
+    },
+    {
+      "id": "c3q25", "topic": "c3t3", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "prompt": "Tính $\\dfrac{1}{\\sqrt{2} - 1} - \\sqrt{2}$.",
+      "answer": "1",
+      "solution": ["$\\dfrac{1}{\\sqrt{2} - 1} = \\dfrac{\\sqrt{2} + 1}{2 - 1} = \\sqrt{2} + 1$.", "$\\sqrt{2} + 1 - \\sqrt{2} = 1$."]
+    },
+    {
+      "id": "c3q26", "topic": "c3t3", "difficulty": "kho", "type": "number", "aiGenerated": true,
+      "prompt": "Tính $\\dfrac{1}{\\sqrt{5} - 2} - \\dfrac{1}{\\sqrt{5} + 2}$.",
+      "answer": "4",
+      "solution": [
+        "$\\dfrac{1}{\\sqrt{5} - 2} = \\dfrac{\\sqrt{5} + 2}{5 - 4} = \\sqrt{5} + 2$; $\\ \\dfrac{1}{\\sqrt{5} + 2} = \\dfrac{\\sqrt{5} - 2}{5 - 4} = \\sqrt{5} - 2$.",
+        "Hiệu: $(\\sqrt{5} + 2) - (\\sqrt{5} - 2) = 4$."
+      ]
+    },
+    {
+      "id": "c3q27", "topic": "c3t3", "difficulty": "kho", "type": "tf", "aiGenerated": true,
+      "prompt": "Với $a < 0$, ta có $a\\sqrt{3} = \\sqrt{3a^2}$.",
+      "answer": false,
+      "solution": ["Khi $a < 0$ thì $a\\sqrt{3} < 0$, còn $\\sqrt{3a^2} > 0$.", "Đúng phải là $a\\sqrt{3} = -\\sqrt{3a^2}$. Khẳng định **sai**."]
+    },
+    {
+      "id": "c3q28", "topic": "c3t3", "difficulty": "kho", "type": "mcq", "aiGenerated": true,
+      "prompt": "Rút gọn $\\dfrac{\\sqrt{15} - \\sqrt{5}}{\\sqrt{3} - 1}$ được",
+      "options": ["$\\sqrt{5}$", "$\\sqrt{3}$", "$\\sqrt{15}$", "$5$"],
+      "answer": 0,
+      "solution": ["Tử: $\\sqrt{15} - \\sqrt{5} = \\sqrt{5}(\\sqrt{3} - 1)$.", "$\\dfrac{\\sqrt{5}(\\sqrt{3} - 1)}{\\sqrt{3} - 1} = \\sqrt{5}$."]
+    },
+    {
+      "id": "c3q29", "topic": "c3t4", "difficulty": "de", "type": "number", "aiGenerated": true,
+      "prompt": "Tính $\\sqrt[3]{-64}$.",
+      "answer": "-4",
+      "solution": ["$(-4)^3 = -64$ nên $\\sqrt[3]{-64} = -4$."]
+    },
+    {
+      "id": "c3q30", "topic": "c3t4", "difficulty": "de", "type": "tf", "aiGenerated": true,
+      "prompt": "Số âm không có căn bậc ba.",
+      "answer": false,
+      "solution": ["Mọi số thực đều có duy nhất một căn bậc ba, chẳng hạn $\\sqrt[3]{-8} = -2$. Khẳng định **sai**."]
+    },
+    {
+      "id": "c3q31", "topic": "c3t4", "difficulty": "de", "type": "mcq", "aiGenerated": true,
+      "prompt": "$\\sqrt[3]{8}$ bằng",
+      "options": ["$2$", "$-2$", "$\\pm 2$", "$4$"],
+      "answer": 0,
+      "solution": ["$2^3 = 8$ nên $\\sqrt[3]{8} = 2$ (căn bậc ba là duy nhất, không có $\\pm$)."]
+    },
+    {
+      "id": "c3q32", "topic": "c3t4", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "prompt": "Tính $\\sqrt[3]{54} : \\sqrt[3]{2}$.",
+      "answer": "3",
+      "solution": ["$\\sqrt[3]{54} : \\sqrt[3]{2} = \\sqrt[3]{27} = 3$."]
+    },
+    {
+      "id": "c3q33", "topic": "c3t4", "difficulty": "tb", "type": "mcq", "aiGenerated": true,
+      "prompt": "Biểu thức $\\sqrt[3]{x - 5}$ xác định khi",
+      "options": ["với mọi $x$", "$x \\ge 5$", "$x > 5$", "$x \\neq 5$"],
+      "answer": 0,
+      "solution": ["Căn bậc ba xác định với mọi số thực, nên $\\sqrt[3]{x - 5}$ xác định với mọi $x$."]
+    },
+    {
+      "id": "c3q34", "topic": "c3t4", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "prompt": "Tìm $x$ biết $\\sqrt[3]{x} = -3$.",
+      "answer": "-27",
+      "solution": ["Lập phương hai vế: $x = (-3)^3 = -27$."]
+    },
+    {
+      "id": "c3q35", "topic": "c3t4", "difficulty": "kho", "type": "number", "aiGenerated": true,
+      "prompt": "Tìm $x$ biết $\\sqrt[3]{2x + 1} = 3$.",
+      "answer": "13",
+      "solution": ["Lập phương hai vế: $2x + 1 = 27$.", "$2x = 26 \\Rightarrow x = 13$."]
+    },
+    {
+      "id": "c3q36", "topic": "c3t4", "difficulty": "kho", "type": "tf", "aiGenerated": true,
+      "prompt": "$\\sqrt[3]{-27} + \\sqrt{9} = 0$.",
+      "answer": true,
+      "solution": ["$\\sqrt[3]{-27} = -3$, $\\sqrt{9} = 3$.", "$-3 + 3 = 0$. Khẳng định **đúng**."]
+    },
+    {
+      "id": "c3q37", "topic": "c3t4", "difficulty": "kho", "type": "mcq", "aiGenerated": true,
+      "prompt": "So sánh $2\\sqrt[3]{3}$ và $\\sqrt[3]{23}$.",
+      "options": ["$2\\sqrt[3]{3} > \\sqrt[3]{23}$", "$2\\sqrt[3]{3} < \\sqrt[3]{23}$", "$2\\sqrt[3]{3} = \\sqrt[3]{23}$", "Không so sánh được"],
+      "answer": 0,
+      "solution": ["$2\\sqrt[3]{3} = \\sqrt[3]{2^3 \\cdot 3} = \\sqrt[3]{24}$.", "$24 > 23$ nên $\\sqrt[3]{24} > \\sqrt[3]{23}$."]
+    },
+    {
+      "id": "c3q38", "topic": "c3t5", "difficulty": "de", "type": "mcq", "aiGenerated": true,
+      "prompt": "Điều kiện xác định của biểu thức $\\dfrac{1}{\\sqrt{x} - 2}$ là",
+      "options": ["$x \\ge 0,\\ x \\neq 4$", "$x > 0$", "$x \\neq 2$", "$x \\ge 0,\\ x \\neq 2$"],
+      "answer": 0,
+      "solution": ["$\\sqrt{x}$ có nghĩa khi $x \\ge 0$.", "Mẫu khác $0$: $\\sqrt{x} \\neq 2 \\Leftrightarrow x \\neq 4$."]
+    },
+    {
+      "id": "c3q39", "topic": "c3t5", "difficulty": "de", "type": "tf", "aiGenerated": true,
+      "prompt": "Với $x \\ge 0$, ta có $x - 1 = (\\sqrt{x} - 1)(\\sqrt{x} + 1)$.",
+      "answer": true,
+      "solution": ["$(\\sqrt{x} - 1)(\\sqrt{x} + 1) = (\\sqrt{x})^2 - 1 = x - 1$. Khẳng định **đúng**."]
+    },
+    {
+      "id": "c3q40", "topic": "c3t5", "difficulty": "de", "type": "number", "aiGenerated": true,
+      "prompt": "Cho $A = \\dfrac{\\sqrt{x} + 1}{\\sqrt{x} - 1}$. Tính giá trị của $A$ khi $x = 9$.",
+      "answer": "2",
+      "solution": ["$x = 9$ thoả ĐKXĐ ($x \\ge 0,\\ x \\neq 1$), $\\sqrt{9} = 3$.", "$A = \\dfrac{3 + 1}{3 - 1} = 2$."]
+    },
+    {
+      "id": "c3q41", "topic": "c3t5", "difficulty": "tb", "type": "mcq", "aiGenerated": true,
+      "prompt": "Rút gọn $\\dfrac{x - 2\\sqrt{x} + 1}{\\sqrt{x} - 1}$ với $x \\ge 0,\\ x \\neq 1$ được",
+      "options": ["$\\sqrt{x} - 1$", "$\\sqrt{x} + 1$", "$x - 1$", "$1$"],
+      "answer": 0,
+      "solution": ["$x - 2\\sqrt{x} + 1 = (\\sqrt{x} - 1)^2$.", "$\\dfrac{(\\sqrt{x} - 1)^2}{\\sqrt{x} - 1} = \\sqrt{x} - 1$."]
+    },
+    {
+      "id": "c3q42", "topic": "c3t5", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "prompt": "Cho $B = \\dfrac{\\sqrt{x}}{\\sqrt{x} + 2}$ với $x \\ge 0$. Tìm $x$ để $B = \\dfrac{1}{3}$.",
+      "answer": "1",
+      "solution": ["$3\\sqrt{x} = \\sqrt{x} + 2 \\Leftrightarrow 2\\sqrt{x} = 2 \\Leftrightarrow \\sqrt{x} = 1$.", "$x = 1$ (thoả ĐK)."]
+    },
+    {
+      "id": "c3q43", "topic": "c3t5", "difficulty": "tb", "type": "tf", "aiGenerated": true,
+      "prompt": "Với $x \\ge 0$, rút gọn $\\dfrac{x\\sqrt{x} - 1}{x + \\sqrt{x} + 1}$ được $\\sqrt{x} - 1$.",
+      "answer": true,
+      "solution": ["$x\\sqrt{x} - 1 = (\\sqrt{x})^3 - 1 = (\\sqrt{x} - 1)(x + \\sqrt{x} + 1)$.", "Chia cho $x + \\sqrt{x} + 1 > 0$ được $\\sqrt{x} - 1$. Khẳng định **đúng**."]
+    },
+    {
+      "id": "c3q44", "topic": "c3t5", "difficulty": "kho", "type": "number", "aiGenerated": true,
+      "prompt": "Cho $P = \\dfrac{\\sqrt{x} + 3}{\\sqrt{x} + 1}$ với $x \\ge 0$. Có bao nhiêu số nguyên $x$ để $P$ nhận giá trị nguyên?",
+      "answer": "2",
+      "solution": [
+        "$P = \\dfrac{(\\sqrt{x} + 1) + 2}{\\sqrt{x} + 1} = 1 + \\dfrac{2}{\\sqrt{x} + 1}$.",
+        "Với $x$ nguyên, $P$ nguyên khi $\\sqrt{x} + 1$ là ước dương của $2$ (vì $\\sqrt{x} + 1 \\ge 1$): $\\sqrt{x} + 1 \\in \\{1; 2\\}$.",
+        "$\\sqrt{x} + 1 = 1 \\Rightarrow x = 0$ ($P = 3$); $\\ \\sqrt{x} + 1 = 2 \\Rightarrow x = 1$ ($P = 2$).",
+        "Có $2$ giá trị nguyên của $x$."
+      ]
+    },
+    {
+      "id": "c3q45", "topic": "c3t5", "difficulty": "kho", "type": "mcq", "aiGenerated": true,
+      "prompt": "Rút gọn $Q = \\left(\\dfrac{1}{\\sqrt{x} - 1} - \\dfrac{1}{\\sqrt{x} + 1}\\right) \\cdot \\dfrac{x - 1}{2}$ với $x \\ge 0,\\ x \\neq 1$ được",
+      "options": ["$1$", "$2$", "$x - 1$", "$\\dfrac{1}{x - 1}$"],
+      "answer": 0,
+      "solution": [
+        "$\\dfrac{1}{\\sqrt{x} - 1} - \\dfrac{1}{\\sqrt{x} + 1} = \\dfrac{(\\sqrt{x} + 1) - (\\sqrt{x} - 1)}{x - 1} = \\dfrac{2}{x - 1}$.",
+        "$Q = \\dfrac{2}{x - 1} \\cdot \\dfrac{x - 1}{2} = 1$."
+      ]
+    },
+    {
+      "id": "c3q46", "topic": "c3t5", "difficulty": "kho", "type": "number", "aiGenerated": true,
+      "prompt": "Cho $A = \\dfrac{2\\sqrt{x}}{\\sqrt{x} + 3}$ với $x \\ge 0$. Có bao nhiêu số nguyên $x$ thoả mãn $A < 1$?",
+      "answer": "9",
+      "solution": [
+        "Vì $\\sqrt{x} + 3 > 0$: $A < 1 \\Leftrightarrow 2\\sqrt{x} < \\sqrt{x} + 3 \\Leftrightarrow \\sqrt{x} < 3 \\Leftrightarrow 0 \\le x < 9$.",
+        "Các số nguyên $x \\in \\{0; 1; \\ldots; 8\\}$, có $9$ số."
+      ]
+    },
+    {
+      "id": "c3q47", "topic": "c3t5", "difficulty": "kho", "type": "tf", "aiGenerated": true,
+      "source": "Bộ đề ôn theo chương (Chương 3, Đề 4 – tự luận)",
+      "prompt": "Theo định luật Joule – Lenz $Q = I^2 R t$, một bếp điện có $R = 80\\ \\Omega$ toả ra nhiệt lượng $500$ J trong $1$ giây. Khi đó cường độ dòng điện là $I = 2{,}5$ A.",
+      "answer": true,
+      "solution": ["$I^2 = \\dfrac{Q}{Rt} = \\dfrac{500}{80 \\cdot 1} = 6{,}25$.", "$I = \\sqrt{6{,}25} = 2{,}5$ A (lấy $I > 0$). Khẳng định **đúng**."]
+    }
+  ]
+}

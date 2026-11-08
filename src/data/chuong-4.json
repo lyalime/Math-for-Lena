@@ -1,0 +1,276 @@
+{
+  "id": 4,
+  "title": "Hệ thức lượng trong tam giác vuông",
+  "short": "Hệ thức lượng",
+  "doodle": "triangle",
+  "status": "ready",
+  "topics": [
+    {
+      "id": "c4t1",
+      "title": "Tỉ số lượng giác của góc nhọn",
+      "aiGenerated": true,
+      "summary": "Trong tam giác vuông, sin = đối/huyền, cos = kề/huyền, tan = đối/kề, cot = kề/đối; hai góc phụ nhau thì sin góc này bằng cos góc kia.",
+      "points": [
+        "Tam giác $ABC$ vuông tại $A$, góc nhọn $B = \\alpha$: $\\sin\\alpha = \\dfrac{AC}{BC}$ (đối/huyền), $\\cos\\alpha = \\dfrac{AB}{BC}$ (kề/huyền), $\\tan\\alpha = \\dfrac{AC}{AB}$ (đối/kề), $\\cot\\alpha = \\dfrac{AB}{AC}$ (kề/đối).",
+        "Mẹo nhớ: **Sin đi học, Cos không hư, Tan đoàn kết, Cot kết đoàn.**",
+        "$0 < \\sin\\alpha < 1$, $0 < \\cos\\alpha < 1$; $\\tan\\alpha \\cdot \\cot\\alpha = 1$; $\\sin^2\\alpha + \\cos^2\\alpha = 1$; $\\tan\\alpha = \\dfrac{\\sin\\alpha}{\\cos\\alpha}$.",
+        "**Hai góc phụ nhau** ($\\alpha + \\beta = 90^\\circ$): $\\sin\\alpha = \\cos\\beta$, $\\tan\\alpha = \\cot\\beta$.",
+        "Giá trị đặc biệt: $\\sin 30^\\circ = \\dfrac{1}{2}$, $\\sin 45^\\circ = \\dfrac{\\sqrt{2}}{2}$, $\\sin 60^\\circ = \\dfrac{\\sqrt{3}}{2}$; $\\tan 30^\\circ = \\dfrac{\\sqrt{3}}{3}$, $\\tan 45^\\circ = 1$, $\\tan 60^\\circ = \\sqrt{3}$."
+      ],
+      "formulas": [
+        { "id": "c4t1f1", "front": "$\\sin\\alpha$ và $\\cos\\alpha$ trong tam giác vuông", "back": "$\\sin\\alpha = \\dfrac{\\text{đối}}{\\text{huyền}}$, $\\ \\cos\\alpha = \\dfrac{\\text{kề}}{\\text{huyền}}$" },
+        { "id": "c4t1f2", "front": "$\\tan\\alpha$ và $\\cot\\alpha$ trong tam giác vuông", "back": "$\\tan\\alpha = \\dfrac{\\text{đối}}{\\text{kề}}$, $\\ \\cot\\alpha = \\dfrac{\\text{kề}}{\\text{đối}}$" },
+        { "id": "c4t1f3", "front": "Hệ thức giữa $\\sin$ và $\\cos$ của cùng một góc", "back": "$\\sin^2\\alpha + \\cos^2\\alpha = 1$" },
+        { "id": "c4t1f4", "front": "$\\tan\\alpha \\cdot \\cot\\alpha = ?$", "back": "$1$" },
+        { "id": "c4t1f5", "front": "Hai góc phụ nhau $\\alpha + \\beta = 90^\\circ$", "back": "$\\sin\\alpha = \\cos\\beta$, $\\ \\tan\\alpha = \\cot\\beta$" },
+        { "id": "c4t1f6", "front": "$\\sin 30^\\circ,\\ \\sin 45^\\circ,\\ \\sin 60^\\circ$", "back": "$\\dfrac{1}{2},\\ \\dfrac{\\sqrt{2}}{2},\\ \\dfrac{\\sqrt{3}}{2}$" }
+      ],
+      "example": {
+        "problem": "Cho tam giác $ABC$ vuông tại $A$ có $AB = 3$ cm, $AC = 4$ cm. Tính các tỉ số lượng giác của góc $B$.",
+        "steps": [
+          "Định lí Pythagore: $BC = \\sqrt{3^2 + 4^2} = 5$ (cm).",
+          "Với góc $B$: cạnh đối là $AC = 4$, cạnh kề là $AB = 3$, cạnh huyền là $BC = 5$.",
+          "$\\sin B = \\dfrac{4}{5}$, $\\ \\cos B = \\dfrac{3}{5}$, $\\ \\tan B = \\dfrac{4}{3}$, $\\ \\cot B = \\dfrac{3}{4}$."
+        ],
+        "source": "Phỏng theo đề cương (.docx), Bài 13"
+      }
+    },
+    {
+      "id": "c4t2",
+      "title": "Hệ thức giữa cạnh và góc, giải tam giác vuông",
+      "aiGenerated": true,
+      "summary": "Cạnh góc vuông = cạnh huyền × sin góc đối = cạnh huyền × cos góc kề = cạnh góc vuông kia × tan góc đối.",
+      "points": [
+        "Tam giác $ABC$ vuông tại $A$, cạnh huyền $a = BC$, các cạnh góc vuông $b = AC$, $c = AB$.",
+        "$b = a\\sin B = a\\cos C$; $\\ c = a\\sin C = a\\cos B$.",
+        "$b = c\\tan B = c\\cot C$; $\\ c = b\\tan C = b\\cot B$.",
+        "**Giải tam giác vuông:** tìm tất cả các cạnh và góc còn lại khi biết hai cạnh, hoặc một cạnh và một góc nhọn. Luôn có $\\hat{B} + \\hat{C} = 90^\\circ$.",
+        "Định lí Pythagore: $a^2 = b^2 + c^2$."
+      ],
+      "formulas": [
+        { "id": "c4t2f1", "front": "Cạnh góc vuông theo cạnh huyền và sin", "back": "$b = a\\sin B$ (sin của góc **đối**)" },
+        { "id": "c4t2f2", "front": "Cạnh góc vuông theo cạnh huyền và cos", "back": "$b = a\\cos C$ (cos của góc **kề**)" },
+        { "id": "c4t2f3", "front": "Cạnh góc vuông theo cạnh góc vuông kia và tan", "back": "$b = c\\tan B$ (tan của góc **đối**)" },
+        { "id": "c4t2f4", "front": "Hai góc nhọn của tam giác vuông", "back": "$\\hat{B} + \\hat{C} = 90^\\circ$" },
+        { "id": "c4t2f5", "front": "Định lí Pythagore (vuông tại $A$)", "back": "$BC^2 = AB^2 + AC^2$" }
+      ],
+      "example": {
+        "problem": "Giải tam giác $ABC$ vuông tại $A$, biết $BC = 10$ cm và $\\hat{B} = 30^\\circ$.",
+        "steps": [
+          "$\\hat{C} = 90^\\circ - 30^\\circ = 60^\\circ$.",
+          "$AC = BC \\cdot \\sin B = 10 \\cdot \\dfrac{1}{2} = 5$ (cm).",
+          "$AB = BC \\cdot \\cos B = 10 \\cdot \\dfrac{\\sqrt{3}}{2} = 5\\sqrt{3} \\approx 8{,}66$ (cm)."
+        ]
+      }
+    },
+    {
+      "id": "c4t3",
+      "title": "Ứng dụng thực tế",
+      "aiGenerated": true,
+      "summary": "Vẽ hình, tìm tam giác vuông chứa cạnh cần tính và góc đã biết, chọn tỉ số lượng giác phù hợp rồi tính và làm tròn theo yêu cầu.",
+      "points": [
+        "Vẽ hình minh hoạ, xác định **tam giác vuông**, góc đã biết, cạnh đã biết và cạnh cần tìm.",
+        "**Góc nâng** (nhìn lên) và **góc hạ** (nhìn xuống) đều đo so với **phương nằm ngang**.",
+        "Chiều cao vật khi biết khoảng cách $d$ và góc nâng $\\alpha$: $h = d \\cdot \\tan\\alpha$ (cộng thêm chiều cao tầm mắt nếu có).",
+        "Thang, dốc dài $\\ell$ nghiêng góc $\\alpha$ với mặt đất: độ cao $h = \\ell\\sin\\alpha$, khoảng cách theo phương ngang $= \\ell\\cos\\alpha$.",
+        "Bấm máy tính ở chế độ **độ** (D) và làm tròn đúng yêu cầu của đề."
+      ],
+      "formulas": [
+        { "id": "c4t3f1", "front": "Góc nâng, góc hạ đo so với", "back": "Phương **nằm ngang**" },
+        { "id": "c4t3f2", "front": "Chiều cao vật: khoảng cách $d$, góc nâng $\\alpha$", "back": "$h = d\\tan\\alpha$" },
+        { "id": "c4t3f3", "front": "Thang dài $\\ell$ nghiêng góc $\\alpha$: độ cao đỉnh thang", "back": "$h = \\ell\\sin\\alpha$" },
+        { "id": "c4t3f4", "front": "Thang dài $\\ell$ nghiêng góc $\\alpha$: chân thang cách tường", "back": "$\\ell\\cos\\alpha$" }
+      ],
+      "example": {
+        "problem": "Một cột đèn có bóng trên mặt đất dài $7{,}5$ m. Tia nắng tạo với mặt đất một góc $42^\\circ$. Tính chiều cao cột đèn (làm tròn đến hàng phần trăm).",
+        "steps": [
+          "Cột đèn, bóng và tia nắng tạo thành tam giác vuông; góc $42^\\circ$ đối diện với cột đèn.",
+          "Chiều cao $h = 7{,}5 \\cdot \\tan 42^\\circ \\approx 7{,}5 \\cdot 0{,}9004$.",
+          "$h \\approx 6{,}75$ m."
+        ]
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "c4q01", "topic": "c4t1", "difficulty": "de", "type": "mcq", "aiGenerated": true,
+      "source": "Đề cương ôn tập (.docx), Câu 12",
+      "prompt": "Cho tam giác $ABC$ vuông tại $A$. Khẳng định nào sau đây đúng?",
+      "options": ["$\\sin B = \\dfrac{AC}{BC}$", "$\\sin B = \\dfrac{AB}{BC}$", "$\\tan B = \\dfrac{AB}{AC}$", "$\\cos B = \\dfrac{AC}{BC}$"],
+      "answer": 0,
+      "solution": ["Với góc $B$: cạnh đối $AC$, cạnh kề $AB$, cạnh huyền $BC$.", "$\\sin B = \\dfrac{AC}{BC}$, còn $\\cos B = \\dfrac{AB}{BC}$, $\\tan B = \\dfrac{AC}{AB}$."]
+    },
+    {
+      "id": "c4q02", "topic": "c4t1", "difficulty": "de", "type": "number", "aiGenerated": true,
+      "prompt": "Tính $\\sin 30^\\circ$ (viết dạng số thập phân).",
+      "answer": "0,5", "accept": ["1/2"],
+      "solution": ["$\\sin 30^\\circ = \\dfrac{1}{2} = 0{,}5$."]
+    },
+    {
+      "id": "c4q03", "topic": "c4t1", "difficulty": "de", "type": "tf", "aiGenerated": true,
+      "prompt": "$\\sin 40^\\circ = \\cos 50^\\circ$.",
+      "answer": true,
+      "solution": ["$40^\\circ + 50^\\circ = 90^\\circ$ nên hai góc phụ nhau: $\\sin 40^\\circ = \\cos 50^\\circ$. Khẳng định **đúng**."]
+    },
+    {
+      "id": "c4q04", "topic": "c4t1", "difficulty": "tb", "type": "mcq", "aiGenerated": true,
+      "prompt": "Tam giác $ABC$ vuông tại $A$ có $AB = 6$ cm, $BC = 10$ cm. Khi đó $\\tan C$ bằng",
+      "options": ["$0{,}75$", "$\\dfrac{4}{3}$", "$0{,}6$", "$0{,}8$"],
+      "answer": 0,
+      "solution": ["$AC = \\sqrt{10^2 - 6^2} = 8$ (cm).", "Với góc $C$: cạnh đối $AB = 6$, cạnh kề $AC = 8$. $\\tan C = \\dfrac{6}{8} = 0{,}75$."]
+    },
+    {
+      "id": "c4q05", "topic": "c4t1", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "prompt": "Cho góc nhọn $\\alpha$ có $\\sin\\alpha = 0{,}6$. Tính $\\cos\\alpha$.",
+      "answer": "0,8",
+      "solution": ["$\\cos^2\\alpha = 1 - \\sin^2\\alpha = 1 - 0{,}36 = 0{,}64$.", "$\\cos\\alpha > 0$ nên $\\cos\\alpha = 0{,}8$."]
+    },
+    {
+      "id": "c4q06", "topic": "c4t1", "difficulty": "tb", "type": "tf", "aiGenerated": true,
+      "prompt": "$\\tan 60^\\circ \\cdot \\cot 60^\\circ = \\sqrt{3}$.",
+      "answer": false,
+      "solution": ["Với mọi góc nhọn $\\alpha$: $\\tan\\alpha \\cdot \\cot\\alpha = 1$. Khẳng định **sai**."]
+    },
+    {
+      "id": "c4q07", "topic": "c4t1", "difficulty": "kho", "type": "number", "aiGenerated": true,
+      "prompt": "Tính $\\sin^2 25^\\circ + \\sin^2 65^\\circ$.",
+      "answer": "1",
+      "solution": ["$25^\\circ + 65^\\circ = 90^\\circ$ nên $\\sin 65^\\circ = \\cos 25^\\circ$.", "Biểu thức $= \\sin^2 25^\\circ + \\cos^2 25^\\circ = 1$."]
+    },
+    {
+      "id": "c4q08", "topic": "c4t1", "difficulty": "kho", "type": "mcq", "aiGenerated": true,
+      "prompt": "Cho góc nhọn $\\alpha$ có $\\tan\\alpha = 2$. Giá trị của $\\cot\\alpha$ là",
+      "options": ["$0{,}5$", "$2$", "$-2$", "$4$"],
+      "answer": 0,
+      "solution": ["$\\cot\\alpha = \\dfrac{1}{\\tan\\alpha} = \\dfrac{1}{2} = 0{,}5$."]
+    },
+    {
+      "id": "c4q09", "topic": "c4t1", "difficulty": "kho", "type": "number", "aiGenerated": true,
+      "source": "Bộ đề ôn theo chương (Chương 4, Đề 1 – tự luận câu 4)",
+      "prompt": "Tia nắng chiếu qua điểm $B$ của tòa nhà tạo với mặt đất góc $x$ và tạo với cạnh thẳng đứng $AB$ của tòa nhà góc $y$ (tam giác $ABC$ vuông tại $A$). Biết $\\cos x \\approx 0{,}78$. Tính $\\sin y$ (làm tròn đến hàng phần trăm).",
+      "answer": "0,78",
+      "solution": ["Tam giác $ABC$ vuông tại $A$ nên $x + y = 90^\\circ$ (hai góc nhọn phụ nhau).", "$\\sin y = \\cos x \\approx 0{,}78$."]
+    },
+    {
+      "id": "c4q10", "topic": "c4t2", "difficulty": "de", "type": "mcq", "aiGenerated": true,
+      "prompt": "Tam giác $ABC$ vuông tại $A$, cạnh huyền $BC = a$. Độ dài $AC$ bằng",
+      "options": ["$a\\sin B$", "$a\\cos B$", "$a\\tan B$", "$a\\cot B$"],
+      "answer": 0,
+      "solution": ["$AC$ là cạnh đối diện với góc $B$.", "Cạnh góc vuông = cạnh huyền × sin góc đối: $AC = a\\sin B$."]
+    },
+    {
+      "id": "c4q11", "topic": "c4t2", "difficulty": "de", "type": "number", "aiGenerated": true,
+      "prompt": "Tam giác $ABC$ vuông tại $A$ có $\\hat{B} = 35^\\circ$. Tính số đo góc $C$ (độ).",
+      "answer": "55",
+      "solution": ["$\\hat{B} + \\hat{C} = 90^\\circ \\Rightarrow \\hat{C} = 90^\\circ - 35^\\circ = 55^\\circ$."]
+    },
+    {
+      "id": "c4q12", "topic": "c4t2", "difficulty": "de", "type": "tf", "aiGenerated": true,
+      "prompt": "Trong tam giác vuông, mỗi cạnh góc vuông bằng cạnh góc vuông kia nhân với tang của góc đối diện với nó.",
+      "answer": true,
+      "solution": ["Ví dụ: $AC = AB \\cdot \\tan B$, mà $B$ là góc đối diện với $AC$. Khẳng định **đúng**."]
+    },
+    {
+      "id": "c4q13", "topic": "c4t2", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "prompt": "Tam giác $ABC$ vuông tại $A$ có $BC = 12$ cm, $\\hat{C} = 30^\\circ$. Tính $AB$ (cm).",
+      "answer": "6",
+      "solution": ["$AB$ đối diện với góc $C$: $AB = BC \\cdot \\sin C = 12 \\cdot \\dfrac{1}{2} = 6$ (cm)."]
+    },
+    {
+      "id": "c4q14", "topic": "c4t2", "difficulty": "tb", "type": "mcq", "aiGenerated": true,
+      "prompt": "Tam giác $ABC$ vuông tại $A$ có $AB = 5$ cm, $\\hat{B} = 60^\\circ$. Độ dài $AC$ bằng",
+      "options": ["$5\\sqrt{3}$ cm", "$\\dfrac{5\\sqrt{3}}{3}$ cm", "$10$ cm", "$2{,}5$ cm"],
+      "answer": 0,
+      "solution": ["$AC = AB \\cdot \\tan B = 5 \\cdot \\tan 60^\\circ = 5\\sqrt{3}$ (cm)."]
+    },
+    {
+      "id": "c4q15", "topic": "c4t2", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "source": "Phỏng theo đề cương (.docx), Câu 13 — số liệu do AI chọn",
+      "prompt": "Tam giác $ABC$ vuông tại $A$ có $AB = 4$ cm và $\\hat{C} = 40^\\circ$. Tính $BC$ (cm, làm tròn đến chữ số thập phân thứ nhất).",
+      "answer": "6,2",
+      "solution": ["$AB$ đối diện góc $C$: $AB = BC \\cdot \\sin C \\Rightarrow BC = \\dfrac{AB}{\\sin C} = \\dfrac{4}{\\sin 40^\\circ}$.", "$\\sin 40^\\circ \\approx 0{,}6428 \\Rightarrow BC \\approx 6{,}22 \\approx 6{,}2$ cm."]
+    },
+    {
+      "id": "c4q16", "topic": "c4t2", "difficulty": "kho", "type": "number", "aiGenerated": true,
+      "prompt": "Tam giác $ABC$ vuông tại $A$ có $AB = 3$ cm, $AC = 4$ cm. Tính số đo góc $B$ (làm tròn đến độ).",
+      "answer": "53",
+      "solution": ["$\\tan B = \\dfrac{AC}{AB} = \\dfrac{4}{3}$.", "$\\hat{B} \\approx 53{,}13^\\circ \\approx 53^\\circ$."]
+    },
+    {
+      "id": "c4q17", "topic": "c4t2", "difficulty": "kho", "type": "tf", "aiGenerated": true,
+      "prompt": "Tam giác $ABC$ vuông tại $A$ có $BC = 2AB$ thì $\\hat{C} = 30^\\circ$.",
+      "answer": true,
+      "solution": ["$\\sin C = \\dfrac{AB}{BC} = \\dfrac{1}{2}$.", "$\\hat{C}$ nhọn nên $\\hat{C} = 30^\\circ$. Khẳng định **đúng**."]
+    },
+    {
+      "id": "c4q18", "topic": "c4t2", "difficulty": "kho", "type": "mcq", "aiGenerated": true,
+      "prompt": "Tam giác $ABC$ vuông tại $A$, đường cao $AH$, $AB = 6$ cm, $\\hat{B} = 30^\\circ$. Độ dài $AH$ là",
+      "options": ["$3$ cm", "$3\\sqrt{3}$ cm", "$6\\sqrt{3}$ cm", "$2\\sqrt{3}$ cm"],
+      "answer": 0,
+      "solution": ["Xét tam giác $ABH$ vuông tại $H$: $AH$ đối diện góc $B$.", "$AH = AB \\cdot \\sin B = 6 \\cdot \\dfrac{1}{2} = 3$ (cm)."]
+    },
+    {
+      "id": "c4q19", "topic": "c4t3", "difficulty": "de", "type": "mcq", "aiGenerated": true,
+      "prompt": "Một chiếc thang dài $\\ell$ dựa vào tường, tạo với mặt đất góc $\\alpha$. Khoảng cách từ chân thang đến chân tường là",
+      "options": ["$\\ell\\cos\\alpha$", "$\\ell\\sin\\alpha$", "$\\ell\\tan\\alpha$", "$\\dfrac{\\ell}{\\cos\\alpha}$"],
+      "answer": 0,
+      "solution": ["Thang là cạnh huyền; khoảng cách từ chân thang đến tường là cạnh kề với góc $\\alpha$.", "Cạnh kề = huyền × $\\cos\\alpha$ = $\\ell\\cos\\alpha$."]
+    },
+    {
+      "id": "c4q20", "topic": "c4t3", "difficulty": "de", "type": "tf", "aiGenerated": true,
+      "prompt": "Góc nâng từ mắt người quan sát lên đỉnh tháp được đo so với phương thẳng đứng.",
+      "answer": false,
+      "solution": ["Góc nâng (và góc hạ) đo so với **phương nằm ngang**. Khẳng định **sai**."]
+    },
+    {
+      "id": "c4q21", "topic": "c4t3", "difficulty": "de", "type": "number", "aiGenerated": true,
+      "prompt": "Bóng của một cái cây trên mặt đất dài $10$ m, tia nắng tạo với mặt đất góc $45^\\circ$. Tính chiều cao của cây (m).",
+      "answer": "10",
+      "solution": ["$h = 10 \\cdot \\tan 45^\\circ = 10 \\cdot 1 = 10$ (m)."]
+    },
+    {
+      "id": "c4q22", "topic": "c4t3", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "source": "Phỏng theo đề cương (.docx), Bài 15 — số liệu do AI chọn",
+      "prompt": "Một chiếc thang dài $4$ m được đặt tạo với mặt đất góc \"an toàn\" $65^\\circ$. Chân thang cách chân tường bao nhiêu mét (làm tròn đến chữ số thập phân thứ nhất)?",
+      "answer": "1,7",
+      "solution": ["Khoảng cách $= 4 \\cdot \\cos 65^\\circ \\approx 4 \\cdot 0{,}4226 \\approx 1{,}69$.", "Làm tròn: $\\approx 1{,}7$ m."]
+    },
+    {
+      "id": "c4q23", "topic": "c4t3", "difficulty": "tb", "type": "number", "aiGenerated": true,
+      "source": "Phỏng theo đề cương (.docx), Bài 14 — số liệu do AI chọn",
+      "prompt": "Bậc thềm của một tòa nhà cao $0{,}6$ m so với mặt đất. Lối đi cho xe lăn là một dốc nghiêng dài $6$ m từ chân dốc đến đỉnh dốc. Dốc tạo với phương nằm ngang góc bao nhiêu độ (làm tròn đến độ)?",
+      "answer": "6",
+      "solution": ["Độ cao là cạnh đối, dốc là cạnh huyền: $\\sin\\alpha = \\dfrac{0{,}6}{6} = 0{,}1$.", "$\\alpha \\approx 5{,}74^\\circ \\approx 6^\\circ$."]
+    },
+    {
+      "id": "c4q24", "topic": "c4t3", "difficulty": "tb", "type": "mcq", "aiGenerated": true,
+      "source": "Đề cương HK1 (phần Hình học, Toán thực tế – Bài 2)",
+      "prompt": "Từ đỉnh một ngọn đèn cao $35$ m so với mặt nước biển, người ta nhìn thấy một hòn đảo dưới góc hạ $30^\\circ$. Khoảng cách từ chân đèn đến hòn đảo xấp xỉ",
+      "options": ["$60{,}6$ m", "$20{,}2$ m", "$70$ m", "$30{,}3$ m"],
+      "answer": 0,
+      "solution": [
+        "Góc hạ $30^\\circ$ bằng góc tạo bởi đường nhìn với mặt nước (so le trong).",
+        "Khoảng cách $d$: $\\tan 30^\\circ = \\dfrac{35}{d} \\Rightarrow d = \\dfrac{35}{\\tan 30^\\circ} = 35\\sqrt{3} \\approx 60{,}6$ m."
+      ]
+    },
+    {
+      "id": "c4q25", "topic": "c4t3", "difficulty": "kho", "type": "number", "aiGenerated": true,
+      "prompt": "Một máy bay cất cánh theo đường thẳng tạo với mặt đất góc $20^\\circ$. Sau khi bay được $5$ km, máy bay ở độ cao bao nhiêu km (làm tròn đến hàng phần trăm)?",
+      "answer": "1,71",
+      "solution": ["Quãng bay là cạnh huyền, độ cao là cạnh đối: $h = 5 \\cdot \\sin 20^\\circ$.", "$h \\approx 5 \\cdot 0{,}3420 = 1{,}710 \\approx 1{,}71$ km."]
+    },
+    {
+      "id": "c4q26", "topic": "c4t3", "difficulty": "kho", "type": "number", "aiGenerated": true,
+      "source": "Bộ đề ôn theo chương (Chương 4, Đề 2 – tự luận câu 2)",
+      "prompt": "Một tàu ngầm trên mặt biển bắt đầu lặn xuống theo đường thẳng tạo với mặt nước góc $21^\\circ$. Khi tàu đi được $250$ m thì ở độ sâu bao nhiêu mét (làm tròn đến hàng đơn vị)?",
+      "answer": "90",
+      "solution": ["Độ sâu $= 250 \\cdot \\sin 21^\\circ \\approx 250 \\cdot 0{,}3584 \\approx 89{,}6$.", "Làm tròn: $\\approx 90$ m."]
+    },
+    {
+      "id": "c4q27", "topic": "c4t3", "difficulty": "kho", "type": "tf", "aiGenerated": true,
+      "prompt": "Một con dốc dài $120$ m và cao $10$ m thì góc nghiêng của dốc so với phương nằm ngang nhỏ hơn $5^\\circ$.",
+      "answer": true,
+      "solution": ["$\\sin\\alpha = \\dfrac{10}{120} \\approx 0{,}0833 \\Rightarrow \\alpha \\approx 4{,}78^\\circ$.", "$4{,}78^\\circ < 5^\\circ$. Khẳng định **đúng**."]
+    }
+  ]
+}
