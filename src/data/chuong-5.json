@@ -8,6 +8,7 @@
     {
       "id": "c5t1",
       "title": "Mở đầu về đường tròn",
+      "mindmap": ["$OM < R$: điểm ở trong","$OM = R$: điểm ở trên","$OM > R$: điểm ở ngoài","Tam giác vuông: tâm là trung điểm cạnh huyền"],
       "aiGenerated": true,
       "summary": "Đường tròn $(O; R)$ gồm các điểm cách $O$ một khoảng $R$; so sánh $OM$ với $R$ để biết điểm nằm trong, trên hay ngoài đường tròn.",
       "points": [
@@ -37,6 +38,7 @@
     {
       "id": "c5t2",
       "title": "Cung và dây của đường tròn",
+      "mindmap": ["Đường kính là dây lớn nhất","$d = \\sqrt{R^2 - \\left(\\frac{AB}{2}\\right)^2}$","Đường kính ⊥ dây thì qua trung điểm","Cung nhỏ = góc ở tâm"],
       "aiGenerated": true,
       "summary": "Đường kính là dây lớn nhất; khoảng cách từ tâm đến dây tính bằng Pythagore; số đo cung nhỏ bằng số đo góc ở tâm chắn cung đó.",
       "points": [
@@ -64,6 +66,7 @@
     {
       "id": "c5t3",
       "title": "Độ dài cung tròn, diện tích hình quạt, hình vành khuyên",
+      "mindmap": ["$\\ell = \\frac{\\pi R n}{180}$","$S_q = \\frac{\\pi R^2 n}{360} = \\frac{\\ell R}{2}$","Vành khuyên: $\\pi(R^2 - r^2)$","$C = 2\\pi R$"],
       "aiGenerated": true,
       "summary": "Độ dài cung $n^\\circ$ là $\\dfrac{\\pi R n}{180}$, diện tích hình quạt $n^\\circ$ là $\\dfrac{\\pi R^2 n}{360} = \\dfrac{\\ell R}{2}$, vành khuyên là $\\pi(R^2 - r^2)$.",
       "points": [
@@ -92,6 +95,7 @@
     {
       "id": "c5t4",
       "title": "Đường thẳng và đường tròn, tiếp tuyến",
+      "mindmap": ["$d < R$: cắt nhau (2 điểm)","$d = R$: tiếp xúc","$d > R$: không giao","Tiếp tuyến ⊥ bán kính","Hai tiếp tuyến: $MA = MB$"],
       "aiGenerated": true,
       "summary": "So sánh khoảng cách $d$ từ tâm đến đường thẳng với $R$; tiếp tuyến vuông góc với bán kính tại tiếp điểm; hai tiếp tuyến cắt nhau thì hai đoạn tiếp tuyến bằng nhau.",
       "points": [
@@ -120,6 +124,7 @@
     {
       "id": "c5t5",
       "title": "Vị trí tương đối của hai đường tròn",
+      "mindmap": ["$R - r < d < R + r$: cắt nhau","$d = R + r$: tiếp xúc ngoài","$d = R - r$: tiếp xúc trong","$OO'$ là trung trực dây chung"],
       "aiGenerated": true,
       "summary": "So sánh đoạn nối tâm $d = OO'$ với $R + r$ và $R - r$ để biết hai đường tròn cắt nhau, tiếp xúc hay không giao nhau.",
       "points": [

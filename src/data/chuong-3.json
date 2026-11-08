@@ -8,6 +8,7 @@
     {
       "id": "c3t1",
       "title": "Căn bậc hai và căn thức bậc hai",
+      "mindmap": ["$\\sqrt{a} = x \\Leftrightarrow x \\ge 0,\\ x^2 = a$","$\\sqrt{A}$ có nghĩa khi $A \\ge 0$","$\\sqrt{A^2} = |A|$","Số âm không có căn bậc hai"],
       "aiGenerated": true,
       "summary": "Mỗi số dương có hai căn bậc hai đối nhau; $\\sqrt{A}$ chỉ xác định khi $A \\ge 0$ và luôn có $\\sqrt{A^2} = |A|$.",
       "points": [
@@ -36,6 +37,7 @@
     {
       "id": "c3t2",
       "title": "Khai phương một tích, một thương",
+      "mindmap": ["$\\sqrt{AB} = \\sqrt{A} \\cdot \\sqrt{B}$","$\\sqrt{\\frac{A}{B}} = \\frac{\\sqrt{A}}{\\sqrt{B}}$","$\\sqrt{A + B} \\neq \\sqrt{A} + \\sqrt{B}$"],
       "aiGenerated": true,
       "summary": "Căn của một tích bằng tích các căn, căn của một thương bằng thương các căn (với điều kiện các biểu thức không âm, mẫu dương).",
       "points": [
@@ -61,6 +63,7 @@
     {
       "id": "c3t3",
       "title": "Biến đổi đơn giản biểu thức chứa căn",
+      "mindmap": ["$\\sqrt{A^2 B} = |A|\\sqrt{B}$","Đưa thừa số vào trong căn","Trục căn: nhân liên hợp","So sánh: đưa hết vào căn"],
       "aiGenerated": true,
       "summary": "Đưa thừa số ra ngoài hoặc vào trong dấu căn, khử mẫu và trục căn thức ở mẫu để rút gọn hoặc so sánh.",
       "points": [
@@ -89,6 +92,7 @@
     {
       "id": "c3t4",
       "title": "Căn bậc ba",
+      "mindmap": ["$\\sqrt[3]{a} = x \\Leftrightarrow x^3 = a$","Mọi số đều có căn bậc ba","$\\sqrt[3]{a^3} = a$","Xác định với mọi $A$"],
       "aiGenerated": true,
       "summary": "Mọi số thực đều có đúng một căn bậc ba; $\\sqrt[3]{a^3} = a$ và căn bậc ba giữ nguyên thứ tự.",
       "points": [
@@ -115,6 +119,7 @@
     {
       "id": "c3t5",
       "title": "Rút gọn biểu thức chứa căn",
+      "mindmap": ["Tìm ĐKXĐ trước","$x - 1 = (\\sqrt{x} - 1)(\\sqrt{x} + 1)$","Quy đồng rồi rút gọn","Câu phụ: tính giá trị, tìm $x$"],
       "aiGenerated": true,
       "summary": "Tìm điều kiện xác định, phân tích thành nhân tử theo $\\sqrt{x}$, quy đồng và rút gọn; sau đó giải các câu hỏi phụ (tính giá trị, tìm $x$, giá trị nguyên).",
       "points": [

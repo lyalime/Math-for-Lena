@@ -30,6 +30,8 @@ for (const f of files) {
   const topicIds = new Set(c.topics.map((t) => t.id))
   for (const t of c.topics) {
     ;[t.summary, ...(t.points || [])].forEach((s, i) => checkTex(f, `${t.id} lý thuyết #${i}`, s))
+    ;(t.mindmap || []).forEach((s, i) => checkTex(f, `${t.id} mindmap #${i}`, s))
+    if (c.status === 'ready' && !t.mindmap?.length) err(f, `${t.id}: thiếu "mindmap" (từ khoá cho sơ đồ tư duy)`)
     for (const fm of t.formulas || []) {
       if (ids.has(fm.id)) err(f, `trùng id ${fm.id}`)
       ids.add(fm.id)

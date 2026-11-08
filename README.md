@@ -97,6 +97,12 @@ Số thập phân trong công thức viết `1{,}5` để KaTeX không chèn kho
 
 Mỗi phần tử trong `formulas` tự động trở thành một flashcard.
 
+Trường `"mindmap"` là danh sách 3–5 từ khoá ngắn (có thể chứa công thức). Chúng thành các lá của **sơ đồ tư duy** ở trang chương. Trang Bản đồ còn có thêm "Sơ đồ tổng", với nhánh là chương và lá là chủ đề.
+
+### Hình minh hoạ
+
+Mỗi chủ đề có một hình minh hoạ (nhiều hình có thanh kéo hoặc tab để tương tác), viết bằng SVG trong `src/components/illustrations/`. `algebra.jsx` chứa hình của Chương 1–3, `geometry.jsx` chứa hình của Chương 4–5, và `index.js` là bảng tra từ id chủ đề sang hình. Khi thêm chủ đề mới, viết thêm một component rồi khai báo nó trong `index.js`. Chủ đề chưa có hình thì phần minh hoạ tự ẩn.
+
 ### Câu hỏi
 
 Các trường chung: `id` (không trùng), `topic` (id chủ đề trong chương), `difficulty` (`de` | `tb` | `kho`), `type`, `prompt`, `answer`, `solution` (mảng các bước), `aiGenerated` (true nếu do AI soạn), `source` (tuỳ chọn).

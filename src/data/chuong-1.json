@@ -8,6 +8,7 @@
     {
       "id": "c1t1",
       "title": "Phương trình bậc nhất hai ẩn",
+      "mindmap": ["$ax + by = c$ $(a \\neq 0$ hoặc $b \\neq 0)$","Luôn có vô số nghiệm","Nghiệm là cặp số $(x_0; y_0)$","Tập nghiệm là một đường thẳng"],
       "aiGenerated": true,
       "summary": "Phương trình dạng $ax + by = c$ luôn có vô số nghiệm; mỗi nghiệm là một cặp số $(x_0; y_0)$ và tập nghiệm là một đường thẳng.",
       "points": [
@@ -37,6 +38,7 @@
     {
       "id": "c1t2",
       "title": "Hệ hai phương trình bậc nhất hai ẩn",
+      "mindmap": ["Phương pháp thế","Phương pháp cộng đại số","$\\frac{a}{a'} \\neq \\frac{b}{b'}$: 1 nghiệm","$\\frac{a}{a'} = \\frac{b}{b'} \\neq \\frac{c}{c'}$: vô nghiệm","Đặt ẩn phụ $u = \\frac{1}{x}$"],
       "aiGenerated": true,
       "summary": "Giải hệ bằng phương pháp thế hoặc cộng đại số; so sánh tỉ số các hệ số để biết hệ có một, không có hay vô số nghiệm.",
       "points": [
@@ -67,6 +69,7 @@
     {
       "id": "c1t3",
       "title": "Giải bài toán bằng cách lập hệ phương trình",
+      "mindmap": ["Chọn ẩn + điều kiện","Lập hệ rồi giải","Đối chiếu điều kiện, kết luận","$s = v \\cdot t$; xuôi $v + v_n$","Làm chung: $\\frac{1}{x}$ việc/giờ"],
       "aiGenerated": true,
       "summary": "Chọn hai ẩn kèm điều kiện, biểu diễn các đại lượng theo ẩn, lập hai phương trình, giải rồi đối chiếu điều kiện.",
       "points": [

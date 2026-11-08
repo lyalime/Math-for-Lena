@@ -4,11 +4,29 @@ import { chapterMastery, overallMastery, streak, useProgress, todayKey } from '.
 import { href } from '../lib/router'
 import Doodle from '../components/Doodle'
 import HighlightBar from '../components/HighlightBar'
+import Mindmap from '../components/Mindmap'
+import { Chip } from '../components/Layout'
+import { load, save } from '../lib/storage'
+import { useState } from 'react'
 
 const COLORS = ['yellow', 'pink', 'green', 'blue', 'orange']
 
+// Sơ đồ tổng: gốc là môn học, nhánh là chương, lá là các chủ đề (bấm để mở)
+const overviewBranches = chapters.map((c, i) => ({
+  key: `c${c.id}`,
+  label: `C${c.id}. ${c.short}`,
+  href: href(`/chuong/${c.id}`),
+  color: COLORS[i],
+  leaves: c.topics.map((t) => ({ label: t.title, href: href(`/chu-de/${t.id}`) })),
+}))
+
 export default function Home() {
   const { p } = useProgress()
+  const [view, setView] = useState(() => load('homeView', 'path'))
+  const changeView = (v) => {
+    setView(v)
+    save('homeView', v)
+  }
   const s = streak(p.days)
   const studiedToday = p.days.includes(todayKey())
   const wrong = Object.keys(p.wrong).length
@@ -53,9 +71,23 @@ export default function Home() {
       </a>
 
       <section aria-labelledby="map-title" className="relative">
-        <h2 id="map-title" className="font-hand mb-2 text-xl font-bold">
-          Bản đồ 5 chương
-        </h2>
+        <div className="mb-3 flex flex-wrap items-center gap-2">
+          <h2 id="map-title" className="font-hand mr-2 text-xl font-bold">
+            Bản đồ 5 chương
+          </h2>
+          <Chip active={view === 'path'} onClick={() => changeView('path')}>
+            🗺 Lộ trình
+          </Chip>
+          <Chip active={view === 'mindmap'} onClick={() => changeView('mindmap')}>
+            🧠 Sơ đồ tổng
+          </Chip>
+        </div>
+        {view === 'mindmap' ? (
+          <div className="sketch relative overflow-hidden p-4 sm:p-6">
+            <span className="tape -top-3 left-10" />
+            <Mindmap root={{ label: 'Toán 9', sub: 'Học kì I' }} branches={overviewBranches} />
+          </div>
+        ) : (
         <div className="relative">
           {/* đường mòn nét đứt nối các chương */}
           <svg className="absolute left-[30px] top-6 h-[calc(100%-48px)] w-6 text-ink-soft sm:left-1/2 sm:-ml-3" preserveAspectRatio="none" viewBox="0 0 24 100" aria-hidden="true">
@@ -67,6 +99,7 @@ export default function Home() {
             ))}
           </ol>
         </div>
+        )}
       </section>
 
       <p className="mt-10 text-center text-[13px] text-ink-soft">

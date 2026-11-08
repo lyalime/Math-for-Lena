@@ -8,6 +8,7 @@
     {
       "id": "c2t1",
       "title": "Phương trình quy về phương trình bậc nhất một ẩn",
+      "mindmap": ["$ax + b = 0 \\Rightarrow x = -\\frac{b}{a}$","$A \\cdot B = 0 \\Leftrightarrow A = 0$ hoặc $B = 0$","Chứa ẩn ở mẫu: tìm ĐKXĐ trước","Đối chiếu ĐKXĐ, loại nghiệm"],
       "aiGenerated": true,
       "summary": "Đưa phương trình về dạng tích $A \\cdot B = 0$, hoặc khử mẫu sau khi đặt điều kiện xác định, để quy về phương trình bậc nhất $ax + b = 0$.",
       "points": [
@@ -37,6 +38,7 @@
     {
       "id": "c2t2",
       "title": "Bất đẳng thức và tính chất",
+      "mindmap": ["Cộng hai vế: giữ chiều","Nhân số dương: giữ chiều","Nhân số âm: **đổi chiều**","$a^2 + b^2 \\ge 2ab$"],
       "aiGenerated": true,
       "summary": "Cộng cùng một số vào hai vế thì giữ chiều; nhân với số dương giữ chiều, nhân với số âm thì đổi chiều bất đẳng thức.",
       "points": [
@@ -65,6 +67,7 @@
     {
       "id": "c2t3",
       "title": "Bất phương trình bậc nhất một ẩn",
+      "mindmap": ["$ax + b > 0$ với $a \\neq 0$","Chuyển vế thì đổi dấu","Chia cho số âm: đổi chiều","Không quá $\\le$ · Ít nhất $\\ge$"],
       "aiGenerated": true,
       "summary": "Giải $ax + b > 0$ bằng quy tắc chuyển vế và quy tắc nhân; khi chia hai vế cho số âm phải đổi chiều.",
       "points": [

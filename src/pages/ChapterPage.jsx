@@ -5,11 +5,33 @@ import { PageTitle } from '../components/Layout'
 import HighlightBar from '../components/HighlightBar'
 import Doodle from '../components/Doodle'
 import MathText from '../components/MathText'
+import Mindmap from '../components/Mindmap'
+import { Chip } from '../components/Layout'
+import { load, save } from '../lib/storage'
+import { useMemo, useState } from 'react'
+
+const COLORS = ['yellow', 'pink', 'green', 'blue', 'orange']
 
 export default function ChapterPage({ id }) {
   const c = getChapter(id)
   const { p } = useProgress()
+  const [view, setView] = useState(() => load('chapterView', 'mindmap'))
+  const branches = useMemo(
+    () =>
+      (c?.topics || []).map((t, i) => ({
+        key: t.id,
+        label: t.title,
+        href: href(`/chu-de/${t.id}`),
+        color: COLORS[i % COLORS.length],
+        leaves: t.mindmap || [],
+      })),
+    [c],
+  )
   if (!c) return <NotFound />
+  const changeView = (v) => {
+    setView(v)
+    save('chapterView', v)
+  }
   const ready = c.status === 'ready'
   const m = chapterMastery(p, c)
 
@@ -56,6 +78,22 @@ export default function ChapterPage({ id }) {
             </a>
           </div>
 
+          <div className="mb-4 flex gap-2" role="tablist" aria-label="Cách xem chương">
+            <Chip active={view === 'mindmap'} onClick={() => changeView('mindmap')}>
+              🧠 Sơ đồ tư duy
+            </Chip>
+            <Chip active={view === 'list'} onClick={() => changeView('list')}>
+              📋 Danh sách chủ đề
+            </Chip>
+          </div>
+
+          {view === 'mindmap' ? (
+            <section className="sketch relative mb-4 overflow-hidden p-4 sm:p-6" aria-label="Sơ đồ tư duy">
+              <span className="tape -top-3 left-10" />
+              <Mindmap root={{ label: c.short, sub: `Chương ${c.id}` }} branches={branches} />
+              <p className="mt-4 text-center text-[12.5px] text-ink-soft">Bấm vào một nhánh để mở thẻ lý thuyết và hình minh hoạ của chủ đề đó.</p>
+            </section>
+          ) : (
           <ol className="space-y-4">
             {c.topics.map((t, i) => {
               const tm = topicMastery(p, c, t)
@@ -84,6 +122,7 @@ export default function ChapterPage({ id }) {
               )
             })}
           </ol>
+          )}
         </>
       )}
     </div>

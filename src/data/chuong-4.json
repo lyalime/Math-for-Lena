@@ -8,6 +8,7 @@
     {
       "id": "c4t1",
       "title": "Tỉ số lượng giác của góc nhọn",
+      "mindmap": ["sin = đối / huyền","cos = kề / huyền","tan = đối / kề","$\\sin^2\\alpha + \\cos^2\\alpha = 1$","Góc phụ: $\\sin\\alpha = \\cos(90^\\circ - \\alpha)$"],
       "aiGenerated": true,
       "summary": "Trong tam giác vuông, sin = đối/huyền, cos = kề/huyền, tan = đối/kề, cot = kề/đối; hai góc phụ nhau thì sin góc này bằng cos góc kia.",
       "points": [
@@ -38,6 +39,7 @@
     {
       "id": "c4t2",
       "title": "Hệ thức giữa cạnh và góc, giải tam giác vuông",
+      "mindmap": ["$b = a\\sin B = a\\cos C$","$b = c\\tan B = c\\cot C$","$\\hat{B} + \\hat{C} = 90^\\circ$","Giải tam giác vuông"],
       "aiGenerated": true,
       "summary": "Cạnh góc vuông = cạnh huyền × sin góc đối = cạnh huyền × cos góc kề = cạnh góc vuông kia × tan góc đối.",
       "points": [
@@ -66,6 +68,7 @@
     {
       "id": "c4t3",
       "title": "Ứng dụng thực tế",
+      "mindmap": ["Vẽ hình, tìm tam giác vuông","Góc nâng/hạ đo từ phương ngang","$h = d\\tan\\alpha$","Thang: $h = \\ell\\sin\\alpha$"],
       "aiGenerated": true,
       "summary": "Vẽ hình, tìm tam giác vuông chứa cạnh cần tính và góc đã biết, chọn tỉ số lượng giác phù hợp rồi tính và làm tròn theo yêu cầu.",
       "points": [

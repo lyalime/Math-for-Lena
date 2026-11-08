@@ -7,6 +7,7 @@ import SolutionSteps from '../components/SolutionSteps'
 import { AiBadge } from '../components/Badges'
 import HighlightBar from '../components/HighlightBar'
 import { NotFound } from './ChapterPage'
+import { illustrations } from '../components/illustrations'
 
 const HL = ['yellow', 'pink', 'green', 'blue', 'orange', 'yellow']
 
@@ -17,6 +18,7 @@ export default function TopicPage({ id }) {
   const c = getChapter(t.chapter)
   const nq = c.questions.filter((q) => q.topic === t.id).length
   const m = topicMastery(p, c, t)
+  const Illustration = illustrations[t.id]
 
   return (
     <div>
@@ -56,6 +58,9 @@ export default function TopicPage({ id }) {
               ))}
             </ul>
           </section>
+
+          {/* Minh hoạ trực quan */}
+          {Illustration && <Illustration />}
 
           {/* Công thức nổi bật */}
           <section>
