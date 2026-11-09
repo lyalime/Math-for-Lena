@@ -72,7 +72,7 @@ export default function Exam() {
         <div>
           <div className="font-hand mb-2 text-[15px] font-bold text-ink-soft">Thời gian</div>
           <div className="flex flex-wrap gap-2">
-            {[10, 15, 20, 30].map((k) => (
+            {[10, 15, 20, 30, 60].map((k) => (
               <Chip key={k} active={minutes === k} onClick={() => setMinutes(k)}>
                 {k} phút
               </Chip>
